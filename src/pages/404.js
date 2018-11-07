@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "emotion";
-import App from "../components/layout/App";
-import Title from "../components/atoms/Title";
-import * as font from "../styles/fonts";
+import React from 'react';
+import { css } from 'emotion';
+import App from '../components/layout/App';
+import Title from '../components/atoms/Title';
+import * as font from '../styles/fonts';
 
 const NotFoundPage = props => {
   return (

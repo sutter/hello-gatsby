@@ -1,5 +1,5 @@
-import { css } from "emotion";
-import * as color from "./colors";
+import { css } from 'emotion';
+import * as color from './colors';
 
 export const styleBase = css`
   color: ${color.clr1};

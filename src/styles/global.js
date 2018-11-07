@@ -1,8 +1,8 @@
-import { injectGlobal } from "emotion";
-import normalize from "./normalize";
-import { rem } from "polished";
-import * as font from "./fonts";
-import * as color from "./colors";
+import { injectGlobal } from 'emotion';
+import normalize from './normalize';
+import { rem } from 'polished';
+import * as font from './fonts';
+import * as color from './colors';
 
 /*
  Injects global styles
@@ -17,7 +17,7 @@ injectGlobal`
   body {
     height: 100%;
     font-family: ${font.primary};
-    font-size: ${rem("16px")};
+    font-size: ${rem('16px')};
     font-weight: ${font.weightBase};
     line-height: ${font.lineHeightL};
     text-rendering: optimizeLegibility;

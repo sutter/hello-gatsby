@@ -1,4 +1,4 @@
-import { rem } from "polished";
+import { rem } from 'polished';
 
 /*
   Font-families
@@ -9,21 +9,21 @@ export const primary =
 /*
   Font-sizes
 */
-export const XXS = rem("12px");
-export const XS = rem("14px");
-export const S = rem("16px");
-export const M = rem("18px");
-export const L = rem("20px");
-export const XL = rem("22px");
-export const XXL = rem("24px");
-export const XXXL = rem("32px");
+export const XXS = rem('12px');
+export const XS = rem('14px');
+export const S = rem('16px');
+export const M = rem('18px');
+export const L = rem('20px');
+export const XL = rem('22px');
+export const XXL = rem('24px');
+export const XXXL = rem('32px');
 
 /*
   Font-weight
 */
-export const weightBold = "bold";
-export const weightBase = "400";
-export const weightThin = "100";
+export const weightBold = 'bold';
+export const weightBase = '400';
+export const weightThin = '100';
 
 /*
   Line-height

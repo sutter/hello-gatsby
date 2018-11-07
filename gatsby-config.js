@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
@@ -7,28 +7,28 @@ module.exports = {
     siteUrl: `https://hello-gatsby-js.netlify.com/`,
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-polyfill-io",
-    "gatsby-plugin-sharp",
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-polyfill-io',
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Hello Gatsby",
-        short_name: "Hello",
-        start_url: "/",
-        background_color: "#663399",
-        theme_color: "#663399",
-        display: "minimal-ui",
-        icon: "src/images/icon.png", // This path is relative to the root of the site.
+        name: 'Hello Gatsby',
+        short_name: 'Hello',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-offline",
+    'gatsby-plugin-offline',
     {
-      resolve: "gatsby-source-prismic",
+      resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: "mogment",
+        repositoryName: 'mogment',
         accessToken: `${process.env.API_KEY}`,
-        lang: "*",
+        lang: '*',
       },
     },
     {

@@ -1,15 +1,15 @@
-import React from "react";
-import { css } from "emotion";
-import { rem } from "polished";
-import Link from "../atoms/Link";
+import React from 'react';
+import { css } from 'emotion';
+import { rem } from 'polished';
+import Link from '../atoms/Link';
 
 const Footer = () => (
   <footer
     className={css({
-      padding: rem("20px"),
+      padding: rem('20px'),
     })}
   >
-    Made by{" "}
+    Made by{' '}
     <Link element="a" to="http://sutterlity.fr" target="_blank">
       Laurent Sutterlity
     </Link>

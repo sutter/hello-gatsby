@@ -1,9 +1,9 @@
-import styled from "react-emotion";
-import { css } from "emotion";
-import * as font from "../../styles/fonts.js";
-import * as color from "../../styles/colors";
-import * as link from "../../styles/links";
-import { rem } from "polished";
+import styled from 'react-emotion';
+import { css } from 'emotion';
+import * as font from '../../styles/fonts.js';
+import * as color from '../../styles/colors';
+import * as link from '../../styles/links';
+import { rem } from 'polished';
 
 const title = css`
   font-weight: ${font.weightBold};
@@ -11,10 +11,10 @@ const title = css`
 `;
 
 const spacing = css`
-  margin: ${rem("24px")} 0;
+  margin: ${rem('24px')} 0;
 `;
 
-const Content = styled("div")`
+const Content = styled('div')`
   h1,
   h2,
   h3,
@@ -76,13 +76,13 @@ const Content = styled("div")`
       padding: 0.25rem 0.75rem;
       background: hsla(0, 0%, 0%, 0.04);
       border: 1px solid #eee;
-      border-radius: ${rem("3px")};
+      border-radius: ${rem('3px')};
     }
   }
 
   blockquote {
     ${spacing};
-    padding-left: ${rem("20px")};
+    padding-left: ${rem('20px')};
     color: red;
     border-left: 4px solid red;
 
@@ -97,7 +97,7 @@ const Content = styled("div")`
 
   code {
     font-size: 80%;
-    font-family: Consolas, "Roboto Mono", "Liberation Mono", Menlo, Courier,
+    font-family: Consolas, 'Roboto Mono', 'Liberation Mono', Menlo, Courier,
       monospace;
   }
 
@@ -115,7 +115,7 @@ const Content = styled("div")`
 
   ul,
   ol {
-    padding-left: ${rem("20px")};
+    padding-left: ${rem('20px')};
     ${spacing};
     ol,
     ul {
@@ -139,7 +139,7 @@ const Content = styled("div")`
   dt {
     font-weight: bold;
     &:not(:first-child) {
-      margin-top: ${rem("12px")};
+      margin-top: ${rem('12px')};
     }
   }
 

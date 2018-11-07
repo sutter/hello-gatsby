@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { cx, css } from "emotion";
-import * as font from "../../styles/fonts.js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { cx, css } from 'emotion';
+import * as font from '../../styles/fonts.js';
 
 const Title = ({ element, ...props }) => {
   props.href = props.to;
@@ -12,7 +12,7 @@ const Title = ({ element, ...props }) => {
       css`
         font-weight: ${font.weightBold};
         line-height: ${font.lineHeightL};
-      `
+      `,
     ),
   });
 };

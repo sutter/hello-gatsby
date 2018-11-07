@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { cx, css } from "emotion";
-import * as link from "../../styles/links";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { cx, css } from 'emotion';
+import * as link from '../../styles/links';
 
 const Link = ({ element, ...props }) => {
   props.href = props.to;
@@ -11,7 +11,7 @@ const Link = ({ element, ...props }) => {
       props.className,
       css`
         ${link.styleBase}
-      `
+      `,
     ),
   });
 };
@@ -19,7 +19,7 @@ Link.propTypes = {
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 Link.defaultProps = {
-  element: "a",
+  element: 'a',
 };
 
 export default Link;
