@@ -1,10 +1,21 @@
 import React from "react";
+import { css } from "emotion";
 import App from "../components/layout/App";
+import Title from "../components/atoms/Title";
+import * as font from "../styles/fonts";
 
-const NotFoundPage = () => (
-  <App>
-    <h1>NOT FOUND</h1>
-  </App>
-);
-
+const NotFoundPage = props => {
+  return (
+    <App>
+      <Title
+        element="h1"
+        className={css`
+          font-size: ${font.XXXL};
+        `}
+      >
+        Not Found
+      </Title>
+    </App>
+  );
+};
 export default NotFoundPage;

@@ -1,19 +1,19 @@
 import React from "react";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import * as font from "../../styles/fonts.js";
-
-const title = css`
-  font-weight: ${font.weightBold};
-  line-height: ${font.lineHeightL};
-`;
 
 const Title = ({ element, ...props }) => {
   props.href = props.to;
-  props.className = css`
-    ${title};
-    font-size: ${props.size};
-  `;
-  return React.createElement(element, props);
+  return React.createElement(element, {
+    ...props,
+    className: cx(
+      props.className,
+      css`
+        font-weight: ${font.weightBold};
+        line-height: ${font.lineHeightL};
+      `
+    ),
+  });
 };
 
 export default Title;

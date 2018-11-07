@@ -1,4 +1,5 @@
 import React from "react";
+import { css } from "emotion";
 // import { graphql } from "gatsby";
 import App from "../components/layout/App";
 import Title from "../components/atoms/Title";
@@ -8,7 +9,12 @@ const IndexPage = props => {
   // const DATA = props.data.content.data;
   return (
     <App>
-      <Title element="h1" size={font.XXXL}>
+      <Title
+        element="h1"
+        className={css`
+          font-size: ${font.XXXL};
+        `}
+      >
         Hello World {/*DATA.bigtitle*/}
       </Title>
     </App>
