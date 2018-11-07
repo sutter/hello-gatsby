@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://hello-gatsby-js.netlify.com/`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
