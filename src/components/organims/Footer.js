@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "emotion";
 import { rem } from "polished";
+import Link from "../atoms/Link";
 
 const Footer = () => (
   <footer
@@ -8,7 +9,10 @@ const Footer = () => (
       padding: rem("20px"),
     })}
   >
-    Footer
+    Made by{" "}
+    <Link element="a" to="http://sutterlity.fr" target="_blank">
+      Laurent Sutterlity
+    </Link>
   </footer>
 );
 

@@ -2,6 +2,7 @@ import styled from "react-emotion";
 import { css } from "emotion";
 import * as font from "../../styles/fonts.js";
 import * as color from "../../styles/colors";
+import * as link from "../../styles/links";
 import { rem } from "polished";
 
 const title = css`
@@ -107,13 +108,7 @@ const Content = styled("div")`
 
   /* Links */
   a {
-    color: ${color.clr1};
-    transition: color 0.3s ease-in-out;
-    &:active,
-    &:hover,
-    &:focus {
-      color: ${color.clr1Light};
-    }
+    ${link.styleBase}
   }
 
   /* List */
