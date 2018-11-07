@@ -10,7 +10,7 @@ const Footer = () => (
     })}
   >
     Made by{' '}
-    <Link element="a" to="http://sutterlity.fr" target="_blank">
+    <Link to="http://sutterlity.fr" target="_blank">
       Laurent Sutterlity
     </Link>
   </footer>

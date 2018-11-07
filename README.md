@@ -11,6 +11,7 @@
 - Sharp image processing library: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=gatsby-plugin-sharp)
 - Sitemap: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap)
 - Polyfill.io: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-polyfill-io/)
+- Storybook: [website](https://storybook.js.org/)
 
 ## 🚀 Prerequisites
 
@@ -87,8 +88,14 @@
     ```
 
 1.  **Serve Build**
+
     ```sh
     gatsby serve
+    ```
+
+1.  **Launch Storybook**
+    ```sh
+    yarn storybook
     ```
 
 ## 💫 Deploy

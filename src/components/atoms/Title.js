@@ -16,8 +16,10 @@ const Title = ({ element, ...props }) => {
     ),
   });
 };
+
 Title.propTypes = {
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  children: PropTypes.node.isRequired,
 };
 
 export default Title;
