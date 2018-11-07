@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "hello-gatsby",
+  "description": "Hello Gatsby starter",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Laurent Sutterlity <laurent@sutterlity.fr>",
   "dependencies": {
     "add": "^2.0.6",
     "emotion": "^9.2.12",
@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/sutter/hello-gatsby"
   }
 }
