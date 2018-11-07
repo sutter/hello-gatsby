@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 import * as font from "../../styles/fonts.js";
 
@@ -14,6 +15,9 @@ const Title = ({ element, ...props }) => {
       `
     ),
   });
+};
+Title.propTypes = {
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 
 export default Title;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 import * as link from "../../styles/links";
 
@@ -13,6 +14,12 @@ const Link = ({ element, ...props }) => {
       `
     ),
   });
+};
+Link.propTypes = {
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+};
+Link.defaultProps = {
+  element: "a",
 };
 
 export default Link;

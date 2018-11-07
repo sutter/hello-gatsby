@@ -18,6 +18,7 @@
     "gatsby-plugin-sitemap": "^2.0.2",
     "gatsby-source-prismic": "^2.0.0",
     "polished": "^2.3.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-emotion": "^9.2.12",
