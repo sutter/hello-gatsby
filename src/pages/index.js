@@ -1,8 +1,10 @@
 import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 import { css } from "emotion";
 // import { graphql } from "gatsby";
 import App from "../components/layout/App";
 import Title from "../components/atoms/Title";
+import Link from "../components/atoms/Link";
 import * as font from "../styles/fonts";
 
 const IndexPage = props => {
@@ -17,6 +19,11 @@ const IndexPage = props => {
       >
         Hello World {/*DATA.bigtitle*/}
       </Title>
+      <div>
+        <Link to="/404" element={GatsbyLink}>
+          Not found page
+        </Link>
+      </div>
     </App>
   );
 };
