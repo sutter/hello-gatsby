@@ -9,11 +9,11 @@ const Link = ({ element, disabled, ...props }) => {
     ...props,
     className: cx(
       props.className,
-      css`
-        ${link.styleBase}
-        opacity: ${props => (disabled ? 0.5 : 1)};
-        pointer-events: ${props => (disabled ? 'none' : 'auto')};
-      `,
+      link.styleBase,
+      css({
+        opacity: disabled ? 0.5 : 1,
+        pointerEvents: disabled ? 'none' : 'auto',
+      }),
     ),
   });
 };

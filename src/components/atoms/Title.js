@@ -11,10 +11,10 @@ const Title = ({ element, ...props }) => {
     ...props,
     className: cx(
       props.className,
-      css`
-        font-weight: ${font.weightBold};
-        line-height: ${font.lineHeightL};
-      `,
+      css({
+        fontWeight: font.weightBold,
+        lineHeight: font.lineHeightL,
+      }),
     ),
   });
 };
