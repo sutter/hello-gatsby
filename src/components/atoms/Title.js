@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { cx, css } from 'emotion';
 import * as font from '../../styles/fonts.js';
 
+export const elements = ['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
 const Title = ({ element, ...props }) => {
   props.href = props.to;
   return React.createElement(element, {
@@ -18,8 +20,12 @@ const Title = ({ element, ...props }) => {
 };
 
 Title.propTypes = {
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  element: PropTypes.oneOf(elements),
   children: PropTypes.node.isRequired,
+};
+
+Title.defaultProps = {
+  element: elements[0],
 };
 
 export default Title;
