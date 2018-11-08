@@ -83,8 +83,7 @@ const Content = styled('div')`
   blockquote {
     ${spacing};
     padding-left: ${rem('20px')};
-    color: red;
-    border-left: 4px solid red;
+    border-left: 4px solid;
 
     p {
       margin: 0;
@@ -108,7 +107,7 @@ const Content = styled('div')`
 
   /* Links */
   a {
-    ${link.styleBase}
+    ${link.styleBase};
   }
 
   /* List */
@@ -157,15 +156,15 @@ const Content = styled('div')`
 
   /* Table */
   table {
+    ${spacing};
     width: 100%;
     max-width: 100%;
-    margin-bottom: 1rem;
     line-height: ${font.lineHeightM};
   }
 
   thead {
     th {
-      padding: 1rem;
+      padding: ${rem('10px')};
       vertical-align: bottom;
       border-bottom: 2px solid ${color.border};
       font-weight: ${font.weightBold};
@@ -173,12 +172,8 @@ const Content = styled('div')`
   }
 
   tbody {
-    th {
-      font-weight: ${font.weightBold};
-    }
-    tr,
-    th {
-      padding: 1rem;
+    td {
+      padding: ${rem('10px')};
       border-bottom: 1px solid ${color.border};
     }
   }
