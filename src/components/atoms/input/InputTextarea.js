@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { rem } from 'polished';
 import { cx, css } from 'emotion';
-import * as input from '../../styles/inputs';
-import * as state from '../../styles/state';
+import * as input from '../../../styles/inputs';
+import * as state from '../../../styles/state';
 
 export const types = [
   'text',
@@ -17,18 +18,15 @@ export const types = [
   'time',
 ];
 
-const InputBase = ({
-  type,
-  value,
+const InputTextarea = ({
+  children,
   placeholder,
   disabled,
   readOnly,
   className,
   ...props
 }) => (
-  <input
-    type={type}
-    value={value}
+  <textarea
     placeholder={placeholder}
     disabled={disabled}
     readOnly={readOnly}
@@ -36,17 +34,20 @@ const InputBase = ({
       className,
       input.inputBase,
       css({
-        padding: `0 ${input.paddingHorizontal}`,
+        padding: `${rem('7px')} ${input.paddingHorizontal}`,
         lineHeight: 1.5,
+        minHeight: rem('200px'),
         opacity: disabled ? state.disabledOpacity : 1,
         pointerEvents: disabled ? 'none' : 'auto',
       }),
     )}
     {...props}
-  />
+  >
+    {children}
+  </textarea>
 );
 
-InputBase.propTypes = {
+InputTextarea.propTypes = {
   types: PropTypes.oneOf(types),
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
@@ -54,10 +55,10 @@ InputBase.propTypes = {
   placeholder: PropTypes.string,
 };
 
-InputBase.defaultProps = {
+InputTextarea.defaultProps = {
   type: types[0],
   disabled: false,
   readOnly: false,
 };
 
-export default InputBase;
+export default InputTextarea;
