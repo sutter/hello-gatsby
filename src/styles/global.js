@@ -8,12 +8,13 @@ import * as color from './colors';
  Injects global styles
 */
 injectGlobal`
-  ${normalize}
+  ${normalize};
   *,
   *::before,
   *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
+  html
   body {
     height: 100%;
     font-family: ${font.primary};
@@ -31,7 +32,6 @@ injectGlobal`
   [tabindex="-1"]:focus {
     outline: none !important;
   }
-  a,
   button,
   textarea,
   select,
@@ -56,7 +56,6 @@ injectGlobal`
   img {
     height: auto;
   }
-  
   /* Typography */
   h1,
   h2,
@@ -121,6 +120,23 @@ injectGlobal`
     overflow: hidden;
   }
   /* Form */
+  a,
+  area,
+  button,
+  [role="button"],
+  input:not([type="range"]),
+  label,
+  select,
+  summary,
+  textarea {
+    touch-action: manipulation;
+  }
+  button,
+  html [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    appearance: button;
+  }
   button,
   input,
   optgroup,
