@@ -35,6 +35,7 @@ const InputBase = ({
     className={cx(
       className,
       input.inputBase,
+      input.inputReadOnly,
       css({
         padding: `0 ${input.paddingHorizontal}`,
         lineHeight: 1.5,

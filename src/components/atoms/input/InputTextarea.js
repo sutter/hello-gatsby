@@ -33,6 +33,7 @@ const InputTextarea = ({
     className={cx(
       className,
       input.inputBase,
+      input.inputReadOnly,
       css({
         padding: `${rem('7px')} ${input.paddingHorizontal}`,
         lineHeight: 1.5,

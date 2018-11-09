@@ -13,6 +13,9 @@ export const inputBase = css`
   box-shadow: none;
   border-radius: ${radius.S};
   min-height: ${rem('40px')};
+`;
+
+export const inputReadOnly = css`
   &:read-only {
     background-color: ${color.border};
     box-shadow: none;
