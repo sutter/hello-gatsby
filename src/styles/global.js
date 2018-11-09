@@ -22,7 +22,7 @@ injectGlobal`
     font-weight: ${font.weightBase};
     line-height: ${font.lineHeightL};
     text-rendering: optimizeLegibility;
-    color: ${color.neutral};
+    color: ${color.neutralDark};
     background: ${color.light};
     overflow: hidden;
     -ms-text-size-adjust: 100%;
@@ -186,7 +186,16 @@ injectGlobal`
     border: 0;
   }
   ::placeholder {
-    color: inherit;
+    color: ${color.neutralLight};
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+      margin: 0;
+  }
+  input[type="number"] {
+      -moz-appearance: textfield;
   }
   
   /* Other */
