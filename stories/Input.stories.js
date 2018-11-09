@@ -2,8 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean, select } from '@storybook/addon-knobs';
+import InputLabel from '../src/components/atoms/input/InputLabel';
 import InputBase, { types } from '../src/components/atoms/input/InputBase';
 import InputTextarea from '../src/components/atoms/input/InputTextarea';
+
+storiesOf('Atom|Input/InputLabel', module).add('base', () => (
+  <InputLabel>{text('children', 'Label')}</InputLabel>
+));
 
 storiesOf('Atom|Input/InputBase', module).add('base', () => (
   <InputBase
@@ -15,6 +20,7 @@ storiesOf('Atom|Input/InputBase', module).add('base', () => (
     onChange={action('onChange')}
   />
 ));
+
 storiesOf('Atom|Input/InputTextarea', module).add('base', () => (
   <InputTextarea
     placeholder={text('placeholder', 'Placeholder')}
