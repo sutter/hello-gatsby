@@ -5,6 +5,7 @@ import { css } from 'emotion';
 import App from '../components/layout/App';
 import Title from '../components/atoms/Title';
 import Link from '../components/atoms/Link';
+import Button from '../components/atoms/Button';
 import * as font from '../styles/fonts';
 
 const IndexPage = props => {
@@ -24,6 +25,7 @@ const IndexPage = props => {
           Not found page
         </Link>
       </div>
+      <Button to="/">Plop</Button>
     </App>
   );
 };
