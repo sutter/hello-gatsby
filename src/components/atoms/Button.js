@@ -4,6 +4,7 @@ import { cx, css } from 'emotion';
 import { rem } from 'polished';
 import * as radius from '../../styles/radius.js';
 import * as color from '../../styles/colors';
+import * as state from '../../styles/state';
 
 const Button = ({ element, disabled, ...props }) => {
   props.href = props.to;
@@ -26,10 +27,8 @@ const Button = ({ element, disabled, ...props }) => {
         fontFamily: 'inherit',
         fontSize: 'inherit',
         lineHeight: 1,
-
-        opacity: disabled ? 0.5 : 1,
+        opacity: disabled ? state.disabledOpacity : 1,
         pointerEvents: disabled ? 'none' : 'auto',
-
         '&:hover, &:focus, &:active': {
           background: color.clr1Light,
           color: color.light,
