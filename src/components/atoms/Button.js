@@ -14,8 +14,8 @@ const Button = ({ element, disabled, ...props }) => {
       props.className,
       css({
         display: 'inline-flex',
-        minHeight: rem('40px'),
-        padding: `${rem('12px')} ${rem('20px')}`,
+        minHeight: rem(40),
+        padding: `${rem(12)} ${rem(20)}`,
         cursor: 'pointer',
         userSelect: 'none',
         textAlign: 'center',

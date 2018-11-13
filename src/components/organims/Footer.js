@@ -6,7 +6,7 @@ import Link from '../atoms/Link';
 const Footer = () => (
   <footer
     className={css({
-      padding: rem('20px'),
+      padding: rem(20),
     })}
   >
     Made by{' '}

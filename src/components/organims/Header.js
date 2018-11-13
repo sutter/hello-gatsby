@@ -6,7 +6,7 @@ import { rem } from 'polished';
 const Header = () => (
   <header
     className={css({
-      padding: rem('20px'),
+      padding: rem(20),
     })}
   >
     <Link to="/">Header</Link>
