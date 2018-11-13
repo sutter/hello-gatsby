@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-polyfill-io',
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -59,6 +58,9 @@ module.exports = {
           }
       }`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-polyfill-io`,
     },
   ],
 };
