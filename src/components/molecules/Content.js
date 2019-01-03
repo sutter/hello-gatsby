@@ -1,5 +1,5 @@
-import styled from 'react-emotion';
-import { css } from 'emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import * as font from '../../styles/fonts.js';
 import * as color from '../../styles/colors';
 import * as link from '../../styles/links';
@@ -11,10 +11,10 @@ const title = css`
 `;
 
 const spacing = css`
-  margin: ${rem('24px')} 0;
+  margin: ${rem(24)} 0;
 `;
 
-const Content = styled('div')`
+const Content = styled.div`
   h1,
   h2,
   h3,

@@ -1,52 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { cx, css } from 'emotion';
+import styled from '@emotion/styled';
 import { rem } from 'polished';
 import * as radius from '../../styles/radius.js';
 import * as color from '../../styles/colors';
 import * as state from '../../styles/state';
 
-const Button = ({ element, disabled, ...props }) => {
-  props.href = props.to;
-  return React.createElement(element, {
-    ...props,
-    className: cx(
-      props.className,
-      css({
-        display: 'inline-flex',
-        minHeight: rem('40px'),
-        padding: `${rem('12px')} ${rem('20px')}`,
-        cursor: 'pointer',
-        userSelect: 'none',
-        textAlign: 'center',
-        textDecoration: 'none',
-        color: color.light,
-        border: 'none',
-        borderRadius: radius.S,
-        background: color.clr1,
-        fontFamily: 'inherit',
-        fontSize: 'inherit',
-        lineHeight: 1,
-        opacity: disabled ? state.disabledOpacity : 1,
-        pointerEvents: disabled ? 'none' : 'auto',
-        '&:hover, &:focus, &:active': {
-          background: color.clr1Light,
-          color: color.light,
-        },
-      }),
-    ),
-  });
-};
-
-Button.propTypes = {
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-};
-
-Button.defaultProps = {
-  element: 'a',
-  disabled: false,
-};
+const Button = styled.a`
+  display: inline-flex;
+  min-height: ${rem(40)};
+  padding: ${rem(12)} ${rem(20)};
+  text-align: center;
+  text-decoration: none;
+  color: ${color.light};
+  background: ${color.clr1};
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  border: none;
+  border-radius: ${radius.S};
+  opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
+  pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
+  cursor: pointer;
+  user-select: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: ${color.clr1Light};
+    color: ${color.light};
+  }
+`;
 
 export default Button;

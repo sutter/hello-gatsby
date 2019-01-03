@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { css } from 'emotion';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import App from '../components/layout/App';
@@ -17,16 +16,16 @@ const IndexPage = props => {
       </Helmet>
       {DATA.title && (
         <Title
-          element="h1"
-          className={css`
-            font-size: ${font.XXXL};
-          `}
+          as="h1"
+          css={{
+            fontSize: font.XXXL,
+          }}
         >
           {DATA.title}
         </Title>
       )}
       <div>
-        <Link to="/404" element={GatsbyLink}>
+        <Link to="/404" as={GatsbyLink}>
           Not found page
         </Link>
       </div>
@@ -40,7 +39,6 @@ export const pageQuery = graphql`
     content: prismicHome {
       data {
         title
-        meta_title
       }
     }
   }

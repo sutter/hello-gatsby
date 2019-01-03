@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import InputLabel from '../src/components/atoms/input/InputLabel';
-import InputBase, { types } from '../src/components/atoms/input/InputBase';
+import InputBase from '../src/components/atoms/input/InputBase';
 import InputTextarea from '../src/components/atoms/input/InputTextarea';
 import InputSelect from '../src/components/atoms/input/InputSelect';
 
@@ -13,7 +13,7 @@ storiesOf('Atom|Input/InputLabel', module).add('base', () => (
 
 storiesOf('Atom|Input/InputBase', module).add('base', () => (
   <InputBase
-    type={select('type', types, types[0])}
+    type={select('type', ['text', 'password', 'number', 'tel'], 'text')}
     value={text('value', '')}
     placeholder={text('placeholder', 'Placeholder')}
     disabled={boolean('disabled', false)}

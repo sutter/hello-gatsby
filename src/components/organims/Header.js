@@ -1,16 +1,16 @@
 import React from 'react';
-import { css } from 'emotion';
+import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { rem } from 'polished';
 
-const Header = () => (
-  <header
-    className={css({
-      padding: rem('20px'),
-    })}
-  >
+const Container = styled.header`
+  padding: ${rem(20)};
+`;
+
+const Header = props => (
+  <Container {...props}>
     <Link to="/">Header</Link>
-  </header>
+  </Container>
 );
 
 export default Header;
