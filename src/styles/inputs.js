@@ -3,7 +3,7 @@ import { rem } from 'polished';
 import * as color from './colors';
 import * as radius from './radius';
 
-export const paddingHorizontal = rem('20px');
+export const paddingHorizontal = rem(20);
 
 export const inputBase = css`
   display: block;
