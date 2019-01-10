@@ -1,10 +1,8 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { rem } from 'polished';
 import * as input from '../../../styles/inputs';
-import * as state from '../../../styles/state';
-import * as color from '../../../styles/colors';
 
-const InputSelect = styled('select')`
+const InputSelect = styled.select`
   ${input.inputBase};
   padding-left: ${input.paddingHorizontal};
   padding-right: ${rem(45)};

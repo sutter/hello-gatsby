@@ -1,19 +1,19 @@
 import React from 'react';
-import { css } from 'emotion';
+import styled from '@emotion/styled';
 import { rem } from 'polished';
 import Link from '../atoms/Link';
 
-const Footer = () => (
-  <footer
-    className={css({
-      padding: rem(20),
-    })}
-  >
+const Container = styled.header`
+  padding: ${rem(20)};
+`;
+
+const Footer = props => (
+  <Container {...props}>
     Made by{' '}
-    <Link to="http://sutterlity.fr" target="_blank">
+    <Link href="http://sutterlity.fr" target="_blank">
       Laurent Sutterlity
     </Link>
-  </footer>
+  </Container>
 );
 
 export default Footer;

@@ -1,21 +1,15 @@
-import { injectGlobal } from 'emotion';
-import normalize from './normalize';
+import { css } from '@emotion/core';
 import { rem } from 'polished';
 import * as font from './fonts';
 import * as color from './colors';
 
-/*
- Injects global styles
-*/
-injectGlobal`
-  ${normalize};
+const base = css`
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-  html
-  body {
+  html body {
     height: 100%;
     font-family: ${font.primary};
     font-size: ${rem(16)};
@@ -29,7 +23,7 @@ injectGlobal`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  [tabindex="-1"]:focus {
+  [tabindex='-1']:focus {
     outline: none !important;
   }
   button,
@@ -109,7 +103,7 @@ injectGlobal`
   img {
     border-style: none;
     vertical-align: bottom;
-    &:not([src$=".svg"]) {
+    &:not([src$='.svg']) {
       height: auto;
     }
   }
@@ -123,8 +117,8 @@ injectGlobal`
   a,
   area,
   button,
-  [role="button"],
-  input:not([type="range"]),
+  [role='button'],
+  input:not([type='range']),
   label,
   select,
   summary,
@@ -132,9 +126,9 @@ injectGlobal`
     touch-action: manipulation;
   }
   button,
-  html [type="button"],
-  [type="reset"],
-  [type="submit"] {
+  html [type='button'],
+  [type='reset'],
+  [type='submit'] {
     appearance: button;
   }
   button,
@@ -149,7 +143,7 @@ injectGlobal`
   textarea {
     display: block;
   }
-  input:not([type="range"]),
+  input:not([type='range']),
   textarea,
   select {
     appearance: none;
@@ -164,15 +158,15 @@ injectGlobal`
   textarea {
     resize: vertical;
   }
-  [type="checkbox"],
-  [type="radio"] {
+  [type='checkbox'],
+  [type='radio'] {
     display: inline;
     appearance: none;
     &::-ms-check {
       display: none;
     }
   }
-  [type="search"] {
+  [type='search'] {
     box-sizing: border-box;
   }
   select {
@@ -189,20 +183,20 @@ injectGlobal`
     color: ${color.neutralLight};
   }
 
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
-      margin: 0;
+    margin: 0;
   }
-  input[type="number"] {
-      -moz-appearance: textfield;
+  input[type='number'] {
+    -moz-appearance: textfield;
   }
-  
+
   /* Other */
   hr {
     border: 0;
     border-top: 1px solid ${color.neutral};
-    margin: 2rem 0;
+    margin: ${rem(40)} 0;
   }
   /* Table */
   table {
@@ -219,5 +213,6 @@ injectGlobal`
     font-weight: inherit;
     text-align: left;
   }
-}
 `;
+
+export default base;
