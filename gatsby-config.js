@@ -1,12 +1,22 @@
+/**
+ * Load API KEY
+ * Create a .env.development file in root
+ * with this inside : API_KEY=XXXXXXXXXX
+ * Load data width this:
+ * Exemple : `process.env.API_KEY`
+ */
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
+
+/* Gatsby config */
 
 module.exports = {
   siteMetadata: {
     siteUrl: `https://hello-gatsby-js.netlify.com/`,
   },
   plugins: [
+    'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
@@ -22,7 +32,6 @@ module.exports = {
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-emotion`,
       options: {},
@@ -31,10 +40,6 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/sitemap.xml`,
-        // Exclude specific pages or groups of pages using glob parameters
-        // See: https://github.com/isaacs/minimatch
-        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-        // exclude: ["/category/*", `/path/to/page`],
         query: `
         {
           site {
@@ -51,9 +56,6 @@ module.exports = {
           }
       }`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-polyfill-io`,
     },
   ],
 };

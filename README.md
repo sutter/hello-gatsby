@@ -9,7 +9,6 @@
 - Offline: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/?=gatsby-plugin-offline)
 - Sharp image processing library: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=gatsby-plugin-sharp)
 - Sitemap: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap)
-- Polyfill.io: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-polyfill-io/)
 
 ## 🚀 Prerequisites
 
@@ -47,15 +46,6 @@
 
     ```sh
     curl -fsSL https://raw.githubusercontent.com/tophat/yvm/master/scripts/install.sh | bash
-    ```
-
-1.  **Prismic API KEY**
-
-    Create a `.env.development` at the root of the project.
-
-    ```sh
-    # Prismic API_KEY
-    API_KEY=XXXXX_YOUR_TOKEN_XXXXX
     ```
 
 ## 🔨 Commands
