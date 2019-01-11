@@ -44,11 +44,10 @@
 
 1.  **Install Yarn**
 
-    Go to
-    [https://yarnpkg.com/docs/install](https://yarnpkg.com/docs/install/#mac-tab)
+    Go to [https://yvm.js.org/docs/overview](https://yvm.js.org/docs/overview)
 
     ```sh
-    brew install yarn --ignore-dependencies
+    curl -fsSL https://raw.githubusercontent.com/tophat/yvm/master/scripts/install.sh | bash
     ```
 
 1.  **Prismic API KEY**
