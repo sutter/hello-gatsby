@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://hello-gatsby-js.netlify.com/`,
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
