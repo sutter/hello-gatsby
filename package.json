@@ -17,7 +17,6 @@
     "gatsby-plugin-resolve-src": "^1.1.4",
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.4",
-    "gatsby-source-prismic": "^2.2.0",
     "polished": "^2.3.3",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",

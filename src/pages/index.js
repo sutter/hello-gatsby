@@ -8,22 +8,19 @@ import Link from '../components/atoms/Link';
 import * as font from '../styles/fonts';
 
 const IndexPage = props => {
-  const DATA = props.data.content.data;
   return (
     <App>
-      <Helmet title={DATA.meta_title}>
+      <Helmet title="Hello Gatsby">
         <html lang="fr" />
       </Helmet>
-      {DATA.title && (
-        <Title
-          as="h1"
-          css={{
-            fontSize: font.XXXL,
-          }}
-        >
-          {DATA.title}
-        </Title>
-      )}
+      <Title
+        as="h1"
+        css={{
+          fontSize: font.XXXL,
+        }}
+      >
+        Hello World
+      </Title>
       <div>
         <Link to="/404" as={GatsbyLink}>
           Not found page
@@ -34,12 +31,3 @@ const IndexPage = props => {
 };
 
 export default IndexPage;
-export const pageQuery = graphql`
-  query IndexQuery {
-    content: prismicHome {
-      data {
-        title
-      }
-    }
-  }
-`;

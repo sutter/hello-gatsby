@@ -5,7 +5,6 @@
 ## ⚡️ Features
 
 - **css-in-js** with Emotion: [website](https://emotion.sh/) - [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/?=emoti)
-- API Prismic: [website](https://prismic.io/) - [plugin doc](https://www.gatsbyjs.org/packages/gatsby-source-prismic/?=prismic)
 - React-Helmet: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet)
 - Offline: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/?=gatsby-plugin-offline)
 - Sharp image processing library: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=gatsby-plugin-sharp)

@@ -24,14 +24,6 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-source-prismic',
-      options: {
-        repositoryName: 'mogment',
-        accessToken: `${process.env.API_KEY}`,
-        lang: '*',
-      },
-    },
-    {
       resolve: `gatsby-plugin-emotion`,
       options: {},
     },
