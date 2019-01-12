@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import App from '../components/layout/App';
-import Title from '../components/atoms/Title';
+import App from '../components/organims/App';
 import Link from '../components/atoms/Link';
+import Title from '../components/atoms/Title';
 import * as font from '../styles/fonts';
 
 const IndexPage = props => {
@@ -22,9 +20,7 @@ const IndexPage = props => {
         Hello World
       </Title>
       <div>
-        <Link to="/404" as={GatsbyLink}>
-          Not found page
-        </Link>
+        <Link to="/404">Not found page</Link>
       </div>
     </App>
   );

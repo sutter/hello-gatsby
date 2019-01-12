@@ -1,19 +1,16 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { rem } from 'polished';
 import Link from '../atoms/Link';
+import { rem } from 'polished';
 
 const Container = styled.header`
   padding: ${rem(20)};
 `;
 
-const Footer = props => (
+const AppHeader = props => (
   <Container {...props}>
-    Made by{' '}
-    <Link href="http://sutterlity.fr" target="_blank">
-      Laurent Sutterlity
-    </Link>
+    <Link to="/">Header</Link>
   </Container>
 );
 
-export default Footer;
+export default AppHeader;

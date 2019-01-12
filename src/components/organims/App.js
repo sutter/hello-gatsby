@@ -4,8 +4,8 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import { rem } from 'polished';
-import Header from '../organims/Header';
-import Footer from '../organims/Footer';
+import AppHeader from './AppHeader';
+import AppFooter from './AppFooter';
 import base from '../../styles/base';
 import normalize from '../../styles/normalize';
 import * as colors from '../../styles/colors';
@@ -23,7 +23,7 @@ const Container = styled.div`
   overflow-y: scroll;
 `;
 
-const Main = styled.main`
+const AppMain = styled.main`
   padding: ${rem(20)};
   flex-grow: 1;
 `;
@@ -47,9 +47,9 @@ class App extends React.Component {
             ${base}
           `}
         />
-        <Header />
-        <Main>{this.props.children}</Main>
-        <Footer />
+        <AppHeader />
+        <AppMain>{this.props.children}</AppMain>
+        <AppFooter />
       </Container>
     );
   }

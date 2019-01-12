@@ -1,5 +1,5 @@
 import React from 'react';
-import App from '../components/layout/App';
+import App from '../components/organims/App';
 import Title from '../components/atoms/Title';
 import * as font from '../styles/fonts';
 
