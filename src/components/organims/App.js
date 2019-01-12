@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import { rem } from 'polished';
+import SEO from '../molecules/Seo';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import base from '../../styles/base';
@@ -19,6 +20,8 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   background: ${colors.light};
+   {
+  }
   overflow-x: hidden;
   overflow-y: scroll;
 `;
@@ -31,16 +34,10 @@ const AppMain = styled.main`
 class App extends React.Component {
   state = {};
   render() {
+    const { title, description, image, children } = this.props;
     return (
       <Container>
-        <Helmet
-          title="Hello Gatsby"
-          meta={[
-            { name: 'description', content: 'Simple starter for Gatsby.js' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+        <SEO title={title} description={description} image={image} />
         <Global
           styles={css`
             ${normalize}
@@ -48,7 +45,7 @@ class App extends React.Component {
           `}
         />
         <AppHeader />
-        <AppMain>{this.props.children}</AppMain>
+        <AppMain>{children}</AppMain>
         <AppFooter />
       </Container>
     );

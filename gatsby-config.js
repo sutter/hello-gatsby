@@ -1,3 +1,5 @@
+const config = require('./config');
+
 /**
  * Load API KEY
  * Create a .env.development file in root
@@ -12,9 +14,13 @@ require('dotenv').config({
 /* Gatsby config */
 
 module.exports = {
+  /* General Information */
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: `https://hello-gatsby-js.netlify.com/`,
+    siteUrl: config.siteUrl + config.pathPrefix,
   },
+
+  /* Plugins */
   plugins: [
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
@@ -23,11 +29,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Hello Gatsby',
-        short_name: 'Hello',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },

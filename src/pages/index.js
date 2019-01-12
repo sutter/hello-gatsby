@@ -1,16 +1,12 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import App from '../components/organims/App';
 import Link from '../components/atoms/Link';
 import Title from '../components/atoms/Title';
+import App from '../components/organims/App';
 import * as font from '../styles/fonts';
 
 const IndexPage = props => {
   return (
     <App>
-      <Helmet title="Hello Gatsby">
-        <html lang="fr" />
-      </Helmet>
       <Title
         as="h1"
         css={{
