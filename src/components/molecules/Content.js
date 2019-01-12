@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import * as font from '../../styles/fonts.js';
 import * as color from '../../styles/colors';
-import * as link from '../../styles/links';
 import { rem } from 'polished';
 
 const title = css`
@@ -103,11 +102,6 @@ const Content = styled.div`
   pre {
     text-align: left;
     font-size: 100%;
-  }
-
-  /* Links */
-  a {
-    ${link.styleBase};
   }
 
   /* List */

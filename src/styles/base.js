@@ -77,12 +77,12 @@ const base = css`
   }
   /* Links */
   a {
-    text-decoration: none;
-    color: inherit;
+    color: ${color.clr1};
+    transition: color 0.3s ease-in-out;
     &:active,
     &:hover,
     &:focus {
-      color: inherit;
+      color: ${color.clr1Light};
     }
   }
   /* List */
