@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Link from '../atoms/Link';
 import { rem } from 'polished';
 
-const Container = styled.header`
+const Container = styled.footer`
   padding: ${rem(20)};
 `;
 
