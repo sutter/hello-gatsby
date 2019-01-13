@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import { rem } from 'polished';
@@ -20,8 +19,6 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   background: ${colors.light};
-   {
-  }
   overflow-x: hidden;
   overflow-y: scroll;
 `;
