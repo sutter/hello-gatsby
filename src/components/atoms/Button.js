@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { rem } from 'polished';
 import { font, radius, color, state } from '../../constants/styles';
 
 const linkState = '&:hover, &:focus, &:active';
@@ -30,13 +29,13 @@ export const themes = {
 
 export const sizes = {
   M: css`
-    min-height: ${rem(40)};
-    padding: ${rem(12)} ${rem(20)};
+    min-height: 4rem;
+    padding: 1.2rem 2rem;
     font-size: inherit;
   `,
   S: css`
-    min-height: ${rem(30)};
-    padding: ${rem(8)} ${rem(10)};
+    min-height: 3rem;
+    padding: 0.8rem 1rem;
     font-size: ${font.size.XS};
   `,
 };

@@ -1,8 +1,7 @@
 import { css } from '@emotion/core';
-import { rem } from 'polished';
 import { color, radius } from '../constants/styles';
 
-export const paddingHorizontal = rem(20);
+export const paddingHorizontal = '2rem';
 
 export const inputBase = css`
   display: block;
@@ -11,7 +10,7 @@ export const inputBase = css`
   background-color: ${color.light};
   box-shadow: none;
   border-radius: ${radius.S};
-  min-height: ${rem(40)};
+  min-height: 4rem;
 `;
 
 export const inputReadOnly = css`

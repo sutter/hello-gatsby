@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
-import { rem } from 'polished';
 import SEO from '../molecules/Seo';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
@@ -24,7 +23,7 @@ const Container = styled.div`
 `;
 
 const AppMain = styled.main`
-  padding: ${rem(20)};
+  padding: 2rem;
   flex-grow: 1;
 `;
 

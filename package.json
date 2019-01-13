@@ -15,7 +15,6 @@
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.4",
-    "polished": "^2.3.3",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

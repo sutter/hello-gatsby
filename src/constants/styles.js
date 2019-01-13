@@ -1,5 +1,3 @@
-import { rem } from 'polished';
-
 export const color = {
   light: '#ffffff',
 
@@ -19,34 +17,23 @@ export const font = {
     primary:
       "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
   },
-  weight: {
-    light: 300,
-    regular: 400,
-    medium: 500,
-    bold: 700,
-  },
+  weight: { light: 300, regular: 400, medium: 500, bold: 700 },
   size: {
-    XXS: rem(12),
-    XS: rem(14),
-    S: rem(16),
-    M: rem(18),
-    L: rem(20),
-    XL: rem(22),
-    XXL: rem(24),
-    XXXL: rem(32),
+    XXS: '1.2rem',
+    XS: '1.4rem',
+    S: '1.6rem',
+    M: '1.8rem',
+    L: '2rem',
+    XL: '2.2rem',
+    XXL: '2.4rem',
+    XXXL: '3.2rem',
   },
-  lineHeight: {
-    XS: 1,
-    S: 1.15,
-    M: 1.25,
-    L: 1.5,
-    XL: 1.625,
-  },
+  lineHeight: { XS: 1, S: 1.15, M: 1.25, L: 1.5, XL: 1.625 },
 };
 
 export const radius = {
-  XS: rem(2),
-  S: rem(4),
+  XS: '.2rem',
+  S: '.4rem',
 };
 
 export const state = {

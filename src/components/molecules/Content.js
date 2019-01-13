@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { color, font } from '../../constants/styles';
-import { rem } from 'polished';
+import { color, font, radius } from '../../constants/styles';
 
 const title = css`
   font-weight: ${font.weight.bold};
@@ -9,7 +8,7 @@ const title = css`
 `;
 
 const spacing = css`
-  margin: ${rem(24)} 0;
+  margin: 2.4rem 0;
 `;
 
 const Content = styled.div`
@@ -74,13 +73,13 @@ const Content = styled.div`
       padding: 0.25rem 0.75rem;
       background: hsla(0, 0%, 0%, 0.04);
       border: 1px solid #eee;
-      border-radius: ${rem(3)};
+      border-radius: ${radius.XS};
     }
   }
 
   blockquote {
     ${spacing};
-    padding-left: ${rem(20)};
+    padding-left: 2rem;
     border-left: 4px solid;
 
     p {
@@ -107,7 +106,7 @@ const Content = styled.div`
 
   ul,
   ol {
-    padding-left: ${rem(20)};
+    padding-left: 2rem;
     ${spacing};
     ol,
     ul {
@@ -131,7 +130,7 @@ const Content = styled.div`
   dt {
     font-weight: ${font.weight.bold};
     &:not(:first-child) {
-      margin-top: ${rem(12)};
+      margin-top: 1.2rem;
     }
   }
 
@@ -157,7 +156,7 @@ const Content = styled.div`
 
   thead {
     th {
-      padding: ${rem(10)};
+      padding: 1rem;
       vertical-align: bottom;
       border-bottom: 2px solid ${color.border};
       font-weight: ${font.weight.bold};
@@ -166,7 +165,7 @@ const Content = styled.div`
 
   tbody {
     td {
-      padding: ${rem(10)};
+      padding: 1rem;
       border-bottom: 1px solid ${color.border};
     }
   }
