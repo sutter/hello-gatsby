@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Link from '../atoms/Link';
+import Wrapper from '../atoms/Wrapper';
 
 const Container = styled.footer`
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 `;
 
 const AppFooter = props => (
   <Container {...props}>
-    Made by <Link href="http://sutterlity.fr">Laurent Sutterlity</Link>
+    <Wrapper size="M">
+      <p>
+        Made by <Link href="http://sutterlity.fr">Laurent Sutterlity</Link>
+      </p>
+    </Wrapper>
   </Container>
 );
 

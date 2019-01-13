@@ -23,7 +23,6 @@ const Container = styled.div`
 `;
 
 const AppMain = styled.main`
-  padding: 2rem;
   flex-grow: 1;
 `;
 

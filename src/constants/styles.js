@@ -39,3 +39,13 @@ export const radius = {
 export const state = {
   disabledOpacity: 0.25,
 };
+
+export const breakpoint = {
+  smartphone: 480,
+  tablet: 768,
+  desktop: 1024,
+  desktopLarge: 1280,
+};
+
+export const mqUp = size => `@media (min-width: ${breakpoint[size]}px)`;
+export const mqDown = size => `@media (max-width: ${breakpoint[size] - 1}px)`;
