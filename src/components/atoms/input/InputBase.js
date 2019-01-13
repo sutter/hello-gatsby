@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
-import * as state from '../../../styles/state';
+import { state } from '../../../constants/styles';
 
 const InputBase = styled.input`
   ${input.inputBase};

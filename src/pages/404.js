@@ -1,7 +1,7 @@
 import React from 'react';
 import App from '../components/organims/App';
 import Title from '../components/atoms/Title';
-import * as font from '../styles/fonts';
+import { font } from '../constants/styles';
 
 const NotFoundPage = props => {
   return (
@@ -9,7 +9,7 @@ const NotFoundPage = props => {
       <Title
         as="h1"
         css={{
-          fontSize: font.XXXL,
+          fontSize: font.size.XXXL,
         }}
       >
         Not Found

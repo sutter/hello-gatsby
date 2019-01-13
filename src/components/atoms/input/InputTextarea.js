@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { rem } from 'polished';
 import * as input from '../../../styles/inputs';
-import * as state from '../../../styles/state';
+import { state } from '../../../constants/styles';
 
 const InputTextarea = styled.textarea`
   ${input.inputBase};

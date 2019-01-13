@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { rem } from 'polished';
-import * as radius from '../../styles/radius';
-import * as color from '../../styles/colors';
-import * as state from '../../styles/state';
+import { font, radius, color, state } from '../../constants/styles';
 
 const linkState = '&:hover, &:focus, &:active';
 
@@ -39,7 +37,7 @@ export const sizes = {
   S: css`
     min-height: ${rem(30)};
     padding: ${rem(8)} ${rem(10)};
-    font-size: ${rem(12)};
+    font-size: ${font.size.XS};
   `,
 };
 

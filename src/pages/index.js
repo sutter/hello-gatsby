@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '../components/atoms/Link';
 import Title from '../components/atoms/Title';
 import App from '../components/organims/App';
-import * as font from '../styles/fonts';
+import { font } from '../constants/styles';
 
 const IndexPage = props => {
   return (
@@ -10,7 +10,7 @@ const IndexPage = props => {
       <Title
         as="h1"
         css={{
-          fontSize: font.XXXL,
+          fontSize: font.size.XXXL,
         }}
       >
         Hello World

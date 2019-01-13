@@ -1,7 +1,6 @@
 import { css } from '@emotion/core';
 import { rem } from 'polished';
-import * as color from './colors';
-import * as radius from './radius';
+import { color, radius } from '../constants/styles';
 
 export const paddingHorizontal = rem(20);
 

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import * as font from '../../styles/fonts.js';
+import { font } from '../../constants/styles';
 
 const Title = styled.p`
-  font-weight: ${font.weightBold};
-  line-height: ${font.lineHeightL};
+  font-weight: ${font.weight.bold};
+  line-height: ${font.lineHeight.L};
 `;
 
 export default Title;

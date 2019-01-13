@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import * as font from '../../styles/fonts.js';
-import * as color from '../../styles/colors';
+import { color, font } from '../../constants/styles';
 import { rem } from 'polished';
 
 const title = css`
-  font-weight: ${font.weightBold};
-  line-height: ${font.lineHeightL};
+  font-weight: ${font.weight.bold};
+  line-height: ${font.lineHeight.L};
 `;
 
 const spacing = css`
@@ -36,37 +35,37 @@ const Content = styled.div`
   h1 {
     ${spacing};
     ${title};
-    font-size: ${font.XXXL};
+    font-size: ${font.size.XXXL};
   }
 
   h2 {
     ${spacing};
     ${title};
-    font-size: ${font.XXL};
+    font-size: ${font.size.XXL};
   }
 
   h3 {
     ${spacing};
     ${title};
-    font-size: ${font.XL};
+    font-size: ${font.size.XL};
   }
 
   h4 {
     ${spacing};
     ${title};
-    font-size: ${font.L};
+    font-size: ${font.size.L};
   }
 
   h5 {
     ${spacing};
     ${title};
-    font-size: ${font.M};
+    font-size: ${font.size.M};
   }
 
   h6 {
     ${spacing};
     ${title};
-    font-size: ${font.S};
+    font-size: ${font.size.S};
   }
 
   p {
@@ -130,7 +129,7 @@ const Content = styled.div`
   }
 
   dt {
-    font-weight: bold;
+    font-weight: ${font.weight.bold};
     &:not(:first-child) {
       margin-top: ${rem(12)};
     }
@@ -153,7 +152,7 @@ const Content = styled.div`
     ${spacing};
     width: 100%;
     max-width: 100%;
-    line-height: ${font.lineHeightM};
+    line-height: ${font.lineHeight.M};
   }
 
   thead {
@@ -161,7 +160,7 @@ const Content = styled.div`
       padding: ${rem(10)};
       vertical-align: bottom;
       border-bottom: 2px solid ${color.border};
-      font-weight: ${font.weightBold};
+      font-weight: ${font.weight.bold};
     }
   }
 

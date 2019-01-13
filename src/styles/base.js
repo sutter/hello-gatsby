@@ -1,7 +1,6 @@
 import { css } from '@emotion/core';
 import { rem } from 'polished';
-import * as font from './fonts';
-import * as color from './colors';
+import { font, color } from '../constants/styles';
 
 const base = css`
   *,
@@ -11,10 +10,10 @@ const base = css`
   }
   html body {
     height: 100%;
-    font-family: ${font.primary};
+    font-family: ${font.family.primary};
     font-size: ${rem(16)};
-    font-weight: ${font.weightBase};
-    line-height: ${font.lineHeightL};
+    font-weight: ${font.weight.regular};
+    line-height: ${font.lineHeight.L};
     text-rendering: optimizeLegibility;
     color: ${color.neutralDark};
     background: ${color.light};
