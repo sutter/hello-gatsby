@@ -1,15 +1,16 @@
 export const color = {
-  light: '#ffffff',
+  light: '#fff',
 
-  neutralDark: '#212121',
-  neutral: '#666',
-  neutralLight: '#888',
-  neutralLighter: '#ccc',
+  neutralDark: 'hsla(0, 0%, 13%, 1)',
+  neutral: 'hsla(0, 0%, 13%, 0.75)',
+  neutralLight: 'hsla(0, 0%, 13%, 0.5)',
+  neutralLighter: 'hsla(0, 0%, 13%, 0.25)',
 
-  clr1: '#663399',
-  clr1Light: '#8C65B3',
+  clr1: 'hsla(270, 50%, 40%, 1)',
+  clr1Light: 'hsla(270, 50%, 60%, 1)',
 
-  border: '#ededed',
+  borderInput: 'hsla(0, 0%, 13%, 0.125)',
+  borderInputDark: 'hsla(0, 0%, 13%, 0.25)',
 };
 
 export const font = {
