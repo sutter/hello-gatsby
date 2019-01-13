@@ -1,5 +1,7 @@
 import { css } from '@emotion/core';
 
+// normalize.css v8.0.1
+
 const normalize = css`
   html {
     line-height: 1.15;
@@ -7,6 +9,9 @@ const normalize = css`
   }
   body {
     margin: 0;
+  }
+  main {
+    display: block;
   }
   h1 {
     font-size: 2em;
@@ -29,6 +34,7 @@ const normalize = css`
     text-decoration: underline;
     text-decoration: underline dotted;
   }
+  b,
   strong {
     font-weight: bolder;
   }
