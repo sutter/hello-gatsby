@@ -7,6 +7,7 @@ import InputBase from '../src/components/atoms/input/InputBase';
 import InputTextarea from '../src/components/atoms/input/InputTextarea';
 import InputSelect from '../src/components/atoms/input/InputSelect';
 import InputRadio from '../src/components/atoms/input/InputRadio';
+import InputCheckbox from '../src/components/atoms/input/InputCheckbox';
 
 storiesOf('Atom|Input/InputLabel', module).add('base', () => (
   <InputLabel>{text('children', 'Label')}</InputLabel>
@@ -50,4 +51,14 @@ storiesOf('Atom|Input/InputRadio', module).add('base', () => (
   >
     {text('children', 'Children')}
   </InputRadio>
+));
+
+storiesOf('Atom|Input/InputCheckbox', module).add('base', () => (
+  <InputCheckbox
+    checked={boolean('checked', false)}
+    onChange={action('onChange')}
+    disabled={boolean('disabled', false)}
+  >
+    {text('children', 'Children')}
+  </InputCheckbox>
 ));
