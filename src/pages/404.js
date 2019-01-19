@@ -1,7 +1,7 @@
 import React from 'react';
-import App from '../components/organims/App';
-import Title from '../components/atoms/Title';
-import Wrapper from '../components/atoms/Wrapper';
+import Title from '../components/base/Title';
+import Wrapper from '../components/base/Wrapper';
+import App from '../components/layout/App';
 import { font } from '../constants/styles';
 
 const NotFoundPage = props => {

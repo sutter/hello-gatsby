@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from '../components/atoms/Link';
-import Title from '../components/atoms/Title';
-import Wrapper from '../components/atoms/Wrapper';
-import App from '../components/organims/App';
+import Link from '../components/base/Link';
+import Title from '../components/base/Title';
+import Wrapper from '../components/base/Wrapper';
+import App from '../components/layout/App';
 import { font } from '../constants/styles';
 
 const IndexPage = props => {

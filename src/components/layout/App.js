@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
-import SEO from '../molecules/Seo';
+import SEO from '../base/Seo';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import base from '../../styles/base';

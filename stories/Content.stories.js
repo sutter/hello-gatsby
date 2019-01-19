@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Content from '../src/components/molecules/Content';
+import Content from '../src/components/base/Content';
 
-storiesOf('Molecule|Content', module).add('base', () => (
+storiesOf('Base|Content', module).add('base', () => (
   <Content>
     <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
     <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>

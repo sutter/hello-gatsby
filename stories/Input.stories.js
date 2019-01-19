@@ -2,18 +2,18 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean, select } from '@storybook/addon-knobs';
-import InputLabel from '../src/components/atoms/input/InputLabel';
-import InputBase from '../src/components/atoms/input/InputBase';
-import InputTextarea from '../src/components/atoms/input/InputTextarea';
-import InputSelect from '../src/components/atoms/input/InputSelect';
-import InputRadio from '../src/components/atoms/input/InputRadio';
-import InputCheckbox from '../src/components/atoms/input/InputCheckbox';
+import InputLabel from '../src/components/base/input/InputLabel';
+import InputBase from '../src/components/base/input/InputBase';
+import InputTextarea from '../src/components/base/input/InputTextarea';
+import InputSelect from '../src/components/base/input/InputSelect';
+import InputRadio from '../src/components/base/input/InputRadio';
+import InputCheckbox from '../src/components/base/input/InputCheckbox';
 
-storiesOf('Atom|Input/InputLabel', module).add('base', () => (
+storiesOf('Base|Input/InputLabel', module).add('base', () => (
   <InputLabel>{text('children', 'Label')}</InputLabel>
 ));
 
-storiesOf('Atom|Input/InputBase', module).add('base', () => (
+storiesOf('Base|Input/InputBase', module).add('base', () => (
   <InputBase
     type={select('type', ['text', 'password', 'number', 'tel'], 'text')}
     value={text('value', '')}
@@ -24,7 +24,7 @@ storiesOf('Atom|Input/InputBase', module).add('base', () => (
   />
 ));
 
-storiesOf('Atom|Input/InputTextarea', module).add('base', () => (
+storiesOf('Base|Input/InputTextarea', module).add('base', () => (
   <InputTextarea
     placeholder={text('placeholder', 'Placeholder')}
     disabled={boolean('disabled', false)}
@@ -33,7 +33,7 @@ storiesOf('Atom|Input/InputTextarea', module).add('base', () => (
   />
 ));
 
-storiesOf('Atom|Input/InputSelect', module).add('base', () => (
+storiesOf('Base|Input/InputSelect', module).add('base', () => (
   <InputSelect>
     <option value="value1">Value 1</option>
     <option value="value2" defaultValue>
@@ -43,7 +43,7 @@ storiesOf('Atom|Input/InputSelect', module).add('base', () => (
   </InputSelect>
 ));
 
-storiesOf('Atom|Input/InputRadio', module).add('base', () => (
+storiesOf('Base|Input/InputRadio', module).add('base', () => (
   <InputRadio
     checked={boolean('checked', false)}
     onChange={action('onChange')}
@@ -53,7 +53,7 @@ storiesOf('Atom|Input/InputRadio', module).add('base', () => (
   </InputRadio>
 ));
 
-storiesOf('Atom|Input/InputCheckbox', module).add('base', () => (
+storiesOf('Base|Input/InputCheckbox', module).add('base', () => (
   <InputCheckbox
     checked={boolean('checked', false)}
     onChange={action('onChange')}

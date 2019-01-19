@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean, select } from '@storybook/addon-knobs';
-import Button, { sizes, themes } from '../src/components/atoms/Button';
+import Button, { sizes, themes } from '../src/components/base/Button';
 
-storiesOf('Atom|Button', module).add('base', () => (
+storiesOf('Base|Button', module).add('base', () => (
   <Button
     as={select('as', ['a', 'button', 'div'], 'button')}
     href={text('href', 'http://sutterlity.fr')}

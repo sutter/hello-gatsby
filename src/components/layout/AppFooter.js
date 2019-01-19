@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Link from '../atoms/Link';
-import Wrapper from '../atoms/Wrapper';
+import Link from '../base/Link';
+import Wrapper from '../base/Wrapper';
 
 const Container = styled.footer`
   padding-top: 2rem;
