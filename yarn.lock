@@ -870,7 +870,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/preset-typescript@7.1.0":
+"@babel/preset-typescript@7.1.0", "@babel/preset-typescript@^7.0.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.1.0.tgz#49ad6e2084ff0bfb5f1f7fb3b5e76c434d442c7f"
   integrity sha512-LYveByuF9AOM8WrsNne5+N79k1YxjNB6gmpCQsnuSBAcV8QUeB+ZUxQzL7Rz7HksPbahymKkq2qBR+o36ggFZA==
@@ -6565,6 +6565,15 @@ gatsby-plugin-sitemap@^2.0.4:
     minimatch "^3.0.4"
     pify "^3.0.0"
     sitemap "^1.12.0"
+
+gatsby-plugin-typescript@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.3.tgz#07b4f42180d8e4d39b3fa9da5a494390a03d0c6e"
+  integrity sha512-1SPHrGIiUKXe7SeiDLifYr4RBiuyYmXRSpmE9rIOt5HeCgP/qwjrkN261plnZo8Ka1RBd/1JpwOaCE1u4Zb+Mw==
+  dependencies:
+    "@babel/preset-typescript" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
+    babel-plugin-remove-graphql-queries "^2.5.2"
 
 gatsby-react-router-scroll@^2.0.2:
   version "2.0.2"

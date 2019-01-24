@@ -1,6 +1,17 @@
+import React, { SFC } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { font, radius, color, state } from '../../constants/styles';
+
+type ButtonSizes = 'M' | 'S';
+type ButtonThemes = 'primary' | 'neutral';
+
+interface ContainerProps {
+  className?: string;
+  size?: ButtonSizes;
+  disabled: boolean;
+  theme?: ButtonThemes;
+}
 
 const linkState = '&:hover, &:focus, &:active';
 
@@ -40,7 +51,7 @@ export const sizes = {
   `,
 };
 
-const Button = styled.a`
+const StyledButton = styled.a<ContainerProps>`
   display: inline-flex;
   text-align: center;
   text-decoration: none;
@@ -58,9 +69,21 @@ const Button = styled.a`
   ${props => sizes[props.size]};
 `;
 
-Button.defaultProps = {
-  theme: 'primary',
-  size: 'M',
-};
+const Button: SFC<ContainerProps> = ({
+  children,
+  className,
+  size,
+  theme,
+  disabled,
+}) => (
+  <StyledButton
+    className={className}
+    size={size || 'M'}
+    theme={theme || 'primary'}
+    disabled={disabled}
+  >
+    {children}
+  </StyledButton>
+);
 
 export default Button;
