@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { color, state } from '../../../constants/styles';
 
+interface ContainerProps {
+  className?: string;
+  children: ReactNode;
+  disabled?: boolean;
+  checked?: boolean;
+  onChange?(event: any): void;
+}
+
 const bulletSize = 1.6;
 
-const Label = styled.label`
+const Label = styled.label<ContainerProps>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
   opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
@@ -34,10 +42,21 @@ const Label = styled.label`
   }
 `;
 
-const InputRadio = ({ children, checked, disabled, ...rest }) => {
+const InputRadio: SFC<ContainerProps> = ({
+  className,
+  children,
+  checked,
+  disabled,
+  ...rest
+}) => {
   return (
-    <Label checked={checked} disabled={disabled}>
-      <input type="radio" checked={checked} disabled={disabled} {...rest} />
+    <Label checked={checked} disabled={disabled} className={className}>
+      <input
+        type="radio"
+        checked={checked || false}
+        disabled={disabled || false}
+        {...rest}
+      />
       {children}
     </Label>
   );

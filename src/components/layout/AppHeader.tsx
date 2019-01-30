@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { route } from '../../constants/app';
-import Link from '../base/Link';
+import AppLink from '../base/AppLink';
 import Wrapper from '../base/Wrapper';
 
 const Container = styled.header`
@@ -11,8 +11,8 @@ const Container = styled.header`
 
 const AppHeader = props => (
   <Container {...props}>
-    <Wrapper size="M">
-      <Link to={route.home}>Header</Link>
+    <Wrapper>
+      <AppLink to={route.home}>Header</AppLink>
     </Wrapper>
   </Container>
 );

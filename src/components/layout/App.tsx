@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import SEO from '../base/Seo';
@@ -8,6 +7,13 @@ import AppFooter from './AppFooter';
 import base from '../../styles/base';
 import normalize from '../../styles/normalize';
 import { color } from '../../constants/styles';
+
+interface ContainerProps {
+  title?: string;
+  description?: string;
+  image?: string;
+  children: ReactNode;
+}
 
 const Container = styled.div`
   position: absolute;
@@ -26,7 +32,7 @@ const AppMain = styled.main`
   flex-grow: 1;
 `;
 
-class App extends React.Component {
+class App extends React.Component<ContainerProps> {
   state = {};
   render() {
     const { title, description, image, children } = this.props;
@@ -47,7 +53,4 @@ class App extends React.Component {
   }
 }
 
-App.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 export default App;

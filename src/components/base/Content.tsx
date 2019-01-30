@@ -1,10 +1,17 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { color, font, radius } from '../../constants/styles';
+import {
+  color,
+  fontWeight,
+  lineHeight,
+  radius,
+  fontSize,
+  fontFamily,
+} from '../../constants/styles';
 
 const title = css`
-  font-weight: ${font.weight.bold};
-  line-height: ${font.lineHeight.L};
+  font-weight: ${fontWeight.bold};
+  line-height: ${lineHeight.L};
 `;
 
 const spacing = css`
@@ -34,37 +41,37 @@ const Content = styled.div`
   h1 {
     ${spacing};
     ${title};
-    font-size: ${font.size.XXXL};
+    font-size: ${fontSize.XXXL};
   }
 
   h2 {
     ${spacing};
     ${title};
-    font-size: ${font.size.XXL};
+    font-size: ${fontSize.XXL};
   }
 
   h3 {
     ${spacing};
     ${title};
-    font-size: ${font.size.XL};
+    font-size: ${fontSize.XL};
   }
 
   h4 {
     ${spacing};
     ${title};
-    font-size: ${font.size.L};
+    font-size: ${fontSize.L};
   }
 
   h5 {
     ${spacing};
     ${title};
-    font-size: ${font.size.M};
+    font-size: ${fontSize.M};
   }
 
   h6 {
     ${spacing};
     ${title};
-    font-size: ${font.size.S};
+    font-size: ${fontSize.S};
   }
 
   p {
@@ -93,8 +100,7 @@ const Content = styled.div`
 
   code {
     font-size: 80%;
-    font-family: Consolas, 'Roboto Mono', 'Liberation Mono', Menlo, Courier,
-      monospace;
+    font-family: ${fontFamily.code};
   }
 
   pre {
@@ -128,7 +134,7 @@ const Content = styled.div`
   }
 
   dt {
-    font-weight: ${font.weight.bold};
+    font-weight: ${fontWeight.bold};
     &:not(:first-child) {
       margin-top: 1.2rem;
     }
@@ -137,7 +143,7 @@ const Content = styled.div`
   /* Separator */
   hr {
     height: 0;
-    border: 1px solid ${color.border};
+    border: 1px solid ${color.neutralLighter};
     ${spacing};
   }
 
@@ -151,22 +157,22 @@ const Content = styled.div`
     ${spacing};
     width: 100%;
     max-width: 100%;
-    line-height: ${font.lineHeight.M};
+    line-height: ${lineHeight.M};
   }
 
   thead {
     th {
       padding: 1rem;
       vertical-align: bottom;
-      border-bottom: 2px solid ${color.border};
-      font-weight: ${font.weight.bold};
+      border-bottom: 2px solid ${color.neutralLighter};
+      font-weight: ${fontWeight.bold};
     }
   }
 
   tbody {
     td {
       padding: 1rem;
-      border-bottom: 1px solid ${color.border};
+      border-bottom: 1px solid ${color.neutralLighter};
     }
   }
 `;

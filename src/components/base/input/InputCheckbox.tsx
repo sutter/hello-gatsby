@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { color, state, radius } from '../../../constants/styles';
 import IconCheck from '../icons/IconCheck';
+
+interface ContainerProps {
+  className?: string;
+  children: ReactNode;
+  disabled?: boolean;
+  checked?: boolean;
+  onChange?(event: any): void;
+}
 
 const bulletSize = 1.6;
 const bulletTop = 0.4;
@@ -12,7 +20,7 @@ const Icon = styled(IconCheck)`
   top: ${bulletTop}rem;
 `;
 
-const Label = styled.label`
+const Label = styled.label<ContainerProps>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
   opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
@@ -43,9 +51,15 @@ const Label = styled.label`
   }
 `;
 
-const InputCheckbox = ({ children, checked, disabled, ...rest }) => {
+const InputCheckbox: SFC<ContainerProps> = ({
+  className,
+  children,
+  checked,
+  disabled,
+  ...rest
+}) => {
   return (
-    <Label checked={checked} disabled={disabled}>
+    <Label checked={checked} disabled={disabled} className={className}>
       <Icon
         stroke={checked ? color.light : 'transparent'}
         size={bulletSize * 10}

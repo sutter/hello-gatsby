@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { font, color } from '../constants/styles';
+import { fontFamily, fontWeight, lineHeight, color } from '../constants/styles';
 
 const base = css`
   *,
@@ -16,10 +16,10 @@ const base = css`
   }
   body {
     height: 100%;
-    font-family: ${font.family.primary};
+    font-family: ${fontFamily.primary};
     font-size: 1.6rem;
-    font-weight: ${font.weight.regular};
-    line-height: ${font.lineHeight.L};
+    font-weight: ${fontWeight.regular};
+    line-height: ${lineHeight.L};
     text-rendering: optimizeLegibility;
     color: ${color.neutralDark};
     background: ${color.light};
@@ -177,6 +177,10 @@ const base = css`
   select {
     &::-ms-expand {
       display: none;
+    }
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 ${color.neutralDark};
     }
   }
   fieldset {
