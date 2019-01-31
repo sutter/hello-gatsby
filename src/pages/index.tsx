@@ -1,23 +1,28 @@
 import React from 'react';
+import AppLink from '../components/base/AppLink';
 import Title from '../components/base/Title';
 import Wrapper from '../components/base/Wrapper';
 import App from '../components/layout/App';
-import { font } from '../constants/styles';
+import { fontSize } from '../constants/styles';
 
-const NotFoundPage = props => {
+const IndexPage = props => {
   return (
     <App>
-      <Wrapper size="M">
+      <Wrapper>
         <Title
           as="h1"
           css={{
-            fontSize: font.size.XXXL,
+            fontSize: fontSize.XXXL,
           }}
         >
-          Not Found
+          Hello World
         </Title>
+        <div>
+          <AppLink to="/404">Not found page</AppLink>
+        </div>
       </Wrapper>
     </App>
   );
 };
-export default NotFoundPage;
+
+export default IndexPage;

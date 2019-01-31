@@ -1,10 +1,9 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { font, radius, color, state } from '../../constants/styles';
+import { radius, state, color, fontSize } from '../constants/styles';
 
 const linkState = '&:hover, &:focus, &:active';
 
-export const themes = {
+export const CtaThemes = {
   primary: css`
     color: ${color.light};
     background: ${color.clr1};
@@ -27,7 +26,7 @@ export const themes = {
   `,
 };
 
-export const sizes = {
+export const CtaSizes = {
   M: css`
     min-height: 4rem;
     padding: 1.2rem 2rem;
@@ -36,11 +35,11 @@ export const sizes = {
   S: css`
     min-height: 3rem;
     padding: 0.8rem 1rem;
-    font-size: ${font.size.XS};
+    font-size: ${fontSize.XS};
   `,
 };
 
-const Button = styled.a`
+export const CtaBase = css`
   display: inline-flex;
   text-align: center;
   text-decoration: none;
@@ -49,18 +48,12 @@ const Button = styled.a`
   border-radius: ${radius.S};
   border-style: solid;
   border-width: 1px;
-  opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
-  pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   cursor: pointer;
   user-select: none;
   transition: all 0.2s ease-in-out;
-  ${props => themes[props.theme]};
-  ${props => sizes[props.size]};
 `;
 
-Button.defaultProps = {
-  theme: 'primary',
-  size: 'M',
-};
-
-export default Button;
+export const CtaDisabled = css`
+  opacity: ${state.disabledOpacity};
+  pointer-events: none;
+`;
