@@ -5,16 +5,14 @@ import ExternalLink from './ExternalLink';
 import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
 import { CtaSizesType, CtaThemesType } from '../../appTypes';
 
-interface ContainerProps {
-  className?: string;
+interface CtaInterface {
   size?: CtaSizesType;
   disabled?: boolean;
   theme?: CtaThemesType;
-  children: ReactNode;
   to: string;
 }
 
-const Cta: SFC<ContainerProps> = ({
+const Cta: SFC<CtaInterface> = ({
   children,
   to,
   size,

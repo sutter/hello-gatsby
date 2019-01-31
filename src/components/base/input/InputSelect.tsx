@@ -1,14 +1,14 @@
 import React, { SFC } from 'react';
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
-import { InputBasic } from '../../../constants/interface';
+import { InputBasicInterface } from '../../../appInterface';
 
-interface ElementProps {
+interface ComponentInterface {
   multiple?: boolean;
   size?: number;
 }
 
-const Element = styled.select<ElementProps>`
+const Element = styled.select`
   ${input.inputBase};
   padding-left: ${input.paddingHorizontal};
   padding-right: 4.5rem;
@@ -19,7 +19,7 @@ const Element = styled.select<ElementProps>`
   ${input.inputDisabled};
 `;
 
-const InputSelect: SFC<ElementProps & InputBasic> = props => (
+const InputSelect: SFC<ComponentInterface & InputBasicInterface> = props => (
   <Element {...props} />
 );
 

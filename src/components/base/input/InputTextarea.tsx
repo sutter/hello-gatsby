@@ -1,16 +1,19 @@
 import React, { SFC } from 'react';
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
-import { InputBasic, InputEditable } from '../../../constants/interface';
+import {
+  InputBasicInterface,
+  InputEditableInterface,
+} from '../../../appInterface';
 
-interface ElementProps {
+interface ComponentInterface {
   cols?: number;
   rows?: number;
   autocomplete?: 'off' | 'on';
   spellcheck?: boolean;
 }
 
-const Element = styled.textarea<ElementProps>`
+const Element = styled.textarea`
   ${input.inputBase};
   padding: 0.7rem ${input.paddingHorizontal};
   min-height: 20rem;
@@ -19,8 +22,8 @@ const Element = styled.textarea<ElementProps>`
   ${input.inputReadOnly};
 `;
 
-const InputTextarea: SFC<ElementProps & InputBasic & InputEditable> = props => (
-  <Element {...props} />
-);
+const InputTextarea: SFC<
+  ComponentInterface & InputBasicInterface & InputEditableInterface
+> = props => <Element {...props} />;
 
 export default InputTextarea;

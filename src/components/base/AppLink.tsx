@@ -1,22 +1,14 @@
 import React, { SFC, ReactNode } from 'react';
 import { Link } from 'gatsby';
 
-interface ContainerProps {
-  className?: string;
+interface AppLinkInterface {
   to: string;
-  rel?: string;
   children: ReactNode;
 }
 
-const AppLink: SFC<ContainerProps> = ({
-  children,
-  to,
-  className,
-  rel,
-  ...rest
-}) => {
+const AppLink: SFC<AppLinkInterface> = ({ children, to, ...rest }) => {
   return (
-    <Link className={className} to={to} rel={rel} {...rest}>
+    <Link to={to} {...rest}>
       {children}
     </Link>
   );

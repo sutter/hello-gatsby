@@ -1,18 +1,16 @@
 import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { color, state } from '../../../constants/styles';
-
-interface ContainerProps {
-  className?: string;
+import { InputBasicInterface } from '../../../appInterface';
+interface InputRadioInterface {
   children: ReactNode;
-  disabled?: boolean;
   checked?: boolean;
   onChange?(event: any): void;
 }
 
 const bulletSize = 1.6;
 
-const Label = styled.label<ContainerProps>`
+const Label = styled.label<InputRadioInterface & InputBasicInterface>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
   opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
@@ -42,7 +40,7 @@ const Label = styled.label<ContainerProps>`
   }
 `;
 
-const InputRadio: SFC<ContainerProps> = ({
+const InputRadio: SFC<InputRadioInterface & InputBasicInterface> = ({
   className,
   children,
   checked,

@@ -2,25 +2,19 @@ import React, { SFC, ReactNode } from 'react';
 import { css } from '@emotion/core';
 import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
 import { CtaSizesType, CtaThemesType } from '../../appTypes';
+import { ButtonBaseInterface } from '../../appInterface';
 
-interface ContainerProps {
-  className?: string;
+interface ButtonInterface {
   size?: CtaSizesType;
-  disabled?: boolean;
   theme?: CtaThemesType;
   children: ReactNode;
-  form?: string;
-  type?: 'submit' | 'reset' | 'button';
-  onClick(event: any): void;
 }
 
-const Button: SFC<ContainerProps> = ({
+const Button: SFC<ButtonInterface & ButtonBaseInterface> = ({
   children,
-  onClick,
   size,
   theme,
   disabled,
-  className,
   ...rest
 }) => (
   <button
@@ -30,7 +24,6 @@ const Button: SFC<ContainerProps> = ({
       ${CtaThemes[theme]}
       ${disabled && CtaDisabled}
     `}
-    onClick={onClick}
     {...rest}
   >
     {children}

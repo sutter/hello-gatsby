@@ -1,25 +1,17 @@
 import React, { SFC, ReactNode } from 'react';
 
-interface ContainerProps {
-  className?: string;
+interface ExternalLinkInterface {
   href: string;
   children: ReactNode;
 }
 
-const ExternalLink: SFC<ContainerProps> = ({
+const ExternalLink: SFC<ExternalLinkInterface> = ({
   children,
   href,
-  className,
   ...rest
 }) => {
   return (
-    <a
-      className={className}
-      href={href}
-      rel="noopener noreferrer"
-      target="_blank"
-      {...rest}
-    >
+    <a href={href} rel="noopener noreferrer" target="_blank" {...rest}>
       {children}
     </a>
   );

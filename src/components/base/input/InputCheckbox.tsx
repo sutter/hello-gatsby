@@ -2,11 +2,10 @@ import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { color, state, radius } from '../../../constants/styles';
 import IconCheck from '../icons/IconCheck';
+import { InputBasicInterface } from '../../../appInterface';
 
-interface ContainerProps {
-  className?: string;
+interface InputCheckboxInterface {
   children: ReactNode;
-  disabled?: boolean;
   checked?: boolean;
   onChange?(event: any): void;
 }
@@ -20,7 +19,7 @@ const Icon = styled(IconCheck)`
   top: ${bulletTop}rem;
 `;
 
-const Label = styled.label<ContainerProps>`
+const Label = styled.label<InputCheckboxInterface & InputBasicInterface>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
   opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
@@ -51,7 +50,7 @@ const Label = styled.label<ContainerProps>`
   }
 `;
 
-const InputCheckbox: SFC<ContainerProps> = ({
+const InputCheckbox: SFC<InputCheckboxInterface & InputBasicInterface> = ({
   className,
   children,
   checked,

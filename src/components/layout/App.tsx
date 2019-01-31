@@ -8,7 +8,7 @@ import base from '../../styles/base';
 import normalize from '../../styles/normalize';
 import { color } from '../../constants/styles';
 
-interface ContainerProps {
+interface AppInterface {
   title?: string;
   description?: string;
   image?: string;
@@ -32,7 +32,7 @@ const AppMain = styled.main`
   flex-grow: 1;
 `;
 
-class App extends React.Component<ContainerProps> {
+class App extends React.Component<AppInterface> {
   state = {};
   render() {
     const { title, description, image, children } = this.props;
