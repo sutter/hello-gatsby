@@ -1,10 +1,11 @@
 import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { fontWeight, lineHeight } from '../../constants/styles';
+import { TitleNodeType } from '../../appTypes';
 
 interface ElementProps {
   className?: string;
-  as: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  as: TitleNodeType;
   children: ReactNode;
 }
 

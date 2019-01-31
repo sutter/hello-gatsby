@@ -1,13 +1,7 @@
 import React, { SFC, ReactNode } from 'react';
 import { css } from '@emotion/core';
-import {
-  CtaThemes,
-  CtaSizes,
-  CtaBase,
-  CtaDisabled,
-  CtaSizesType,
-  CtaThemesType,
-} from '../../styles/cta';
+import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
+import { CtaSizesType, CtaThemesType } from '../../appTypes';
 
 interface ContainerProps {
   className?: string;

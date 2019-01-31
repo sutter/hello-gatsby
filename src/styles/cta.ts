@@ -3,9 +3,6 @@ import { radius, state, color, fontSize } from '../constants/styles';
 
 const linkState = '&:hover, &:focus, &:active';
 
-export type CtaSizesType = 'M' | 'S';
-export type CtaThemesType = 'primary' | 'neutral';
-
 export const CtaThemes = {
   primary: css`
     color: ${color.light};

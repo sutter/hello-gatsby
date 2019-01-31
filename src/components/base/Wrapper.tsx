@@ -2,12 +2,11 @@ import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { mqUp } from '../../constants/styles';
-
-type WrapperSizes = 'L' | 'M' | 'S' | 'XS';
+import { WrapperSizesType } from '../../appTypes';
 
 interface ContainerProps {
   className?: string;
-  size?: WrapperSizes;
+  size?: WrapperSizesType;
   children: ReactNode;
 }
 

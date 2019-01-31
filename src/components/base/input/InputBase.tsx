@@ -2,20 +2,10 @@ import React, { SFC } from 'react';
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
 import { InputBasic, InputEditable } from '../../../constants/interface';
+import { InputBaseType } from '../../../appTypes';
 
-type InputBaseTypes =
-  | 'text'
-  | 'password'
-  | 'email'
-  | 'tel'
-  | 'number'
-  | 'url'
-  | 'date'
-  | 'month'
-  | 'week'
-  | 'time';
 interface ElementProps {
-  type: InputBaseTypes;
+  type: InputBaseType;
   size?: number;
 }
 
