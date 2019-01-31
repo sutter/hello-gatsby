@@ -7,7 +7,9 @@ import {
 } from '../../../appInterface';
 import { InputBaseType } from '../../../appTypes';
 
-interface InputBaseInterface {
+interface InputBaseInterface
+  extends InputBasicInterface,
+    InputEditableInterface {
   type: InputBaseType;
   size?: number;
 }
@@ -20,9 +22,7 @@ const Element = styled.input`
   ${input.inputReadOnly};
 `;
 
-const InputBase: SFC<
-  InputBaseInterface & InputBasicInterface & InputEditableInterface
-> = props => <Element {...props} />;
+const InputBase: SFC<InputBaseInterface> = props => <Element {...props} />;
 
 InputBase.defaultProps = {
   type: 'text',

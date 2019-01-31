@@ -2,14 +2,14 @@ import React, { SFC } from 'react';
 import Helmet from 'react-helmet';
 import config from '../../../config';
 
-interface SeoInterface {
+interface SeoProps {
   lang?: string;
   title: string;
   description: string;
   image?: string;
 }
 
-const SEO: SFC<SeoInterface> = props => {
+const SEO: SFC<SeoProps> = props => {
   const { title, description, image, lang } = props;
   return (
     <Helmet>

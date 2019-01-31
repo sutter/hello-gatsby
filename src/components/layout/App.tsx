@@ -8,13 +8,6 @@ import base from '../../styles/base';
 import normalize from '../../styles/normalize';
 import { color } from '../../constants/styles';
 
-interface AppInterface {
-  title?: string;
-  description?: string;
-  image?: string;
-  children: ReactNode;
-}
-
 const Container = styled.div`
   position: absolute;
   top: 0;
@@ -32,8 +25,31 @@ const AppMain = styled.main`
   flex-grow: 1;
 `;
 
-class App extends React.Component<AppInterface> {
-  state = {};
+interface AppProps {
+  title?: string;
+  description?: string;
+  image?: string;
+  children: ReactNode;
+}
+
+interface AppState {
+  navMobileOpen: boolean;
+}
+
+class App extends React.Component<AppProps, AppState> {
+  state = {
+    navMobileOpen: false,
+  };
+  toggleNavMobile = () => {
+    this.setState(prevState => ({
+      navMobileOpen: !prevState.navMobileOpen,
+    }));
+  };
+  closeNavMobile = () => {
+    this.setState({
+      navMobileOpen: false,
+    });
+  };
   render() {
     const { title, description, image, children } = this.props;
     return (
@@ -45,7 +61,11 @@ class App extends React.Component<AppInterface> {
             ${base}
           `}
         />
-        <AppHeader />
+        <AppHeader
+          toggleNavMobile={this.toggleNavMobile}
+          closeNavMobile={this.closeNavMobile}
+          navOpen={this.state.navMobileOpen}
+        />
         <AppMain>{children}</AppMain>
         <AppFooter />
       </Container>

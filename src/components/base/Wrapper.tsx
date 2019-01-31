@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import { mqUp } from '../../constants/styles';
 import { WrapperSizesType } from '../../appTypes';
 
-interface WrapperInterface {
+interface WrapperProps {
   className?: string;
   size?: WrapperSizesType;
   children: ReactNode;
@@ -25,7 +25,7 @@ export const sizes = {
   `,
 };
 
-const Container = styled.div<WrapperInterface>`
+const Container = styled.div<WrapperProps>`
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
@@ -38,7 +38,7 @@ const Container = styled.div<WrapperInterface>`
   }
 `;
 
-const Wrapper: SFC<WrapperInterface> = ({ children, className, size }) => (
+const Wrapper: SFC<WrapperProps> = ({ children, className, size }) => (
   <Container className={className} size={size}>
     {children}
   </Container>

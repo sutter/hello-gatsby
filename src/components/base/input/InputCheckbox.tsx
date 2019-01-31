@@ -4,7 +4,7 @@ import { color, state, radius } from '../../../constants/styles';
 import IconCheck from '../icons/IconCheck';
 import { InputBasicInterface } from '../../../appInterface';
 
-interface InputCheckboxInterface {
+interface InputCheckboxProps extends InputBasicInterface {
   children: ReactNode;
   checked?: boolean;
   onChange?(event: any): void;
@@ -19,7 +19,7 @@ const Icon = styled(IconCheck)`
   top: ${bulletTop}rem;
 `;
 
-const Label = styled.label<InputCheckboxInterface & InputBasicInterface>`
+const Label = styled.label<InputCheckboxProps>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
   opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
@@ -50,7 +50,7 @@ const Label = styled.label<InputCheckboxInterface & InputBasicInterface>`
   }
 `;
 
-const InputCheckbox: SFC<InputCheckboxInterface & InputBasicInterface> = ({
+const InputCheckbox: SFC<InputCheckboxProps> = ({
   className,
   children,
   checked,

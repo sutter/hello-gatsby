@@ -6,7 +6,9 @@ import {
   InputEditableInterface,
 } from '../../../appInterface';
 
-interface ComponentInterface {
+interface InputTextareaProps
+  extends InputBasicInterface,
+    InputEditableInterface {
   cols?: number;
   rows?: number;
   autocomplete?: 'off' | 'on';
@@ -22,8 +24,6 @@ const Element = styled.textarea`
   ${input.inputReadOnly};
 `;
 
-const InputTextarea: SFC<
-  ComponentInterface & InputBasicInterface & InputEditableInterface
-> = props => <Element {...props} />;
+const InputTextarea: SFC<InputTextareaProps> = props => <Element {...props} />;
 
 export default InputTextarea;

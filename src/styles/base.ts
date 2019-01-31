@@ -89,6 +89,9 @@ const base = css`
     &:focus {
       color: ${color.clr1Light};
     }
+    &:focus {
+      outline: none;
+    }
   }
   /* List */
   ul,

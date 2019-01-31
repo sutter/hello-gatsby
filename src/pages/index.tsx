@@ -4,6 +4,7 @@ import Title from '../components/base/Title';
 import Wrapper from '../components/base/Wrapper';
 import App from '../components/layout/App';
 import { fontSize } from '../constants/styles';
+import { route } from '../constants/app';
 
 const IndexPage = props => {
   return (
@@ -18,7 +19,247 @@ const IndexPage = props => {
           Hello World
         </Title>
         <div>
-          <AppLink to="/404">Not found page</AppLink>
+          <AppLink to={route.notFound}>Not found page</AppLink>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            exercitationem non perspiciatis quam pariatur officia ab, laboriosam
+            ducimus inventore a deleniti. Blanditiis consequatur eius, expedita
+            eum praesentium ipsum. Placeat, eligendi!
+          </p>
         </div>
       </Wrapper>
     </App>

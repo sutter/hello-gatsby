@@ -3,18 +3,18 @@ import styled from '@emotion/styled';
 import { fontWeight, lineHeight } from '../../constants/styles';
 import { TitleNodeType } from '../../appTypes';
 
-interface TitleInterface {
+interface TitleProps {
   className?: string;
   as?: TitleNodeType;
   children: ReactNode;
 }
 
-const Element = styled.p<TitleInterface>`
+const Element = styled.p<TitleProps>`
   font-weight: ${fontWeight.bold};
   line-height: ${lineHeight.L};
 `;
 
-const Title: SFC<TitleInterface> = ({ children, as, ...rest }) => (
+const Title: SFC<TitleProps> = ({ children, as, ...rest }) => (
   <Element as={as} {...rest}>
     {children}
   </Element>

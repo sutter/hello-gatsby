@@ -4,13 +4,13 @@ import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
 import { CtaSizesType, CtaThemesType } from '../../appTypes';
 import { ButtonBaseInterface } from '../../appInterface';
 
-interface ButtonInterface {
+interface ButtonProps extends ButtonBaseInterface {
   size?: CtaSizesType;
   theme?: CtaThemesType;
   children: ReactNode;
 }
 
-const Button: SFC<ButtonInterface & ButtonBaseInterface> = ({
+const Button: SFC<ButtonProps> = ({
   children,
   size,
   theme,

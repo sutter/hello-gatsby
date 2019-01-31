@@ -2,7 +2,7 @@ import React, { SFC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { color, state } from '../../../constants/styles';
 import { InputBasicInterface } from '../../../appInterface';
-interface InputRadioInterface {
+interface InputRadioProps extends InputBasicInterface {
   children: ReactNode;
   checked?: boolean;
   onChange?(event: any): void;
@@ -10,7 +10,7 @@ interface InputRadioInterface {
 
 const bulletSize = 1.6;
 
-const Label = styled.label<InputRadioInterface & InputBasicInterface>`
+const Label = styled.label<InputRadioProps>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
   opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
@@ -40,7 +40,7 @@ const Label = styled.label<InputRadioInterface & InputBasicInterface>`
   }
 `;
 
-const InputRadio: SFC<InputRadioInterface & InputBasicInterface> = ({
+const InputRadio: SFC<InputRadioProps> = ({
   className,
   children,
   checked,

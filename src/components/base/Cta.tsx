@@ -5,14 +5,14 @@ import ExternalLink from './ExternalLink';
 import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
 import { CtaSizesType, CtaThemesType } from '../../appTypes';
 
-interface CtaInterface {
+interface CtaProps {
   size?: CtaSizesType;
   disabled?: boolean;
   theme?: CtaThemesType;
   to: string;
 }
 
-const Cta: SFC<CtaInterface> = ({
+const Cta: SFC<CtaProps> = ({
   children,
   to,
   size,

@@ -59,6 +59,7 @@ export enum breakpoint {
   tablet = 768,
   desktop = 1024,
   desktopLarge = 1280,
+  mainNav = 666,
 }
 
 export const mqUp = size => `@media (min-width: ${breakpoint[size]}px)`;

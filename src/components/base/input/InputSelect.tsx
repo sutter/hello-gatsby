@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
 import { InputBasicInterface } from '../../../appInterface';
 
-interface ComponentInterface {
+interface InputSelectProps extends InputBasicInterface {
   multiple?: boolean;
   size?: number;
 }
@@ -19,8 +19,6 @@ const Element = styled.select`
   ${input.inputDisabled};
 `;
 
-const InputSelect: SFC<ComponentInterface & InputBasicInterface> = props => (
-  <Element {...props} />
-);
+const InputSelect: SFC<InputSelectProps> = props => <Element {...props} />;
 
 export default InputSelect;
