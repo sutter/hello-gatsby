@@ -1,9 +1,16 @@
-import React, { SFC, ReactNode } from 'react';
+import React, { SFC } from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import posed from 'react-pose';
 import { ButtonBaseInterface } from '../../appInterface';
 import { mqUp, color } from '../../constants/styles';
 
+interface ButtonProps extends ButtonBaseInterface {
+  navOpen: Boolean;
+}
+
 const Button = styled.button`
+  position: relative;
   border: none;
   background: transparent;
   padding: 0 1rem;
@@ -17,34 +24,38 @@ const Button = styled.button`
 `;
 
 const Text = styled.div`
-  position: relative;
-  font-size: 0;
+  color: transparent;
+`;
+
+const LineTop = posed.div({
+  open: { transform: 'translateY(0px)' },
+  close: { transform: 'translateY(-6px)' },
+});
+const LineMiddle = posed.div({
+  open: { opacity: 0, transform: 'scale(0)' },
+  close: { opacity: 1, transform: 'scale(1)' },
+});
+const LineBottom = posed.div({
+  open: { transform: 'translateY(0px)' },
+  close: { transform: 'translateY(6px)' },
+});
+
+const Lines = css`
+  position: absolute;
+  top: calc(50% - 0.1rem);
+  left: calc(50% - 1rem);
   height: 0.2rem;
   width: 2rem;
   background: ${color.clr1};
   border-radius: 666rem;
-
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 0.2rem;
-    width: 2rem;
-    background: ${color.clr1};
-    border-radius: 666rem;
-  }
-  &::before {
-    top: -0.5rem;
-  }
-  &::after {
-    bottom: -0.5rem;
-  }
 `;
 
-const NavButton: SFC<ButtonBaseInterface> = ({ onClick, ...rest }) => (
+const NavButton: SFC<ButtonProps> = ({ onClick, navOpen, ...rest }) => (
   <Button onClick={onClick} {...rest}>
     <Text>Menu</Text>
+    <LineTop css={Lines} pose={navOpen ? 'open' : 'close'} />
+    <LineMiddle css={Lines} pose={navOpen ? 'open' : 'close'} />
+    <LineBottom css={Lines} pose={navOpen ? 'open' : 'close'} />
   </Button>
 );
 

@@ -64,3 +64,8 @@ export enum breakpoint {
 
 export const mqUp = size => `@media (min-width: ${breakpoint[size]}px)`;
 export const mqDown = size => `@media (max-width: ${breakpoint[size] + -1}px)`;
+
+export enum header {
+  heightBase = '10rem',
+  heightSmall = '4rem',
+}
