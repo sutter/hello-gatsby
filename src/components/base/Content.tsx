@@ -29,7 +29,7 @@ const Content = styled.div`
   dl,
   blockquote,
   table {
-    &:first-child {
+    &:first-of-type {
       margin-top: 0;
     }
     &:last-child {
@@ -135,7 +135,7 @@ const Content = styled.div`
 
   dt {
     font-weight: ${fontWeight.bold};
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-top: 1.2rem;
     }
   }

@@ -44,7 +44,7 @@ const GridItemNav = styled(GridItemNavPose)`
   ${mqUp('mainNav')} {
     display: flex;
     align-items: center;
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-left: 3rem;
     }
   }
