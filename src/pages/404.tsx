@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { SFC } from 'react';
 import Title from '../components/base/Title';
 import Wrapper from '../components/base/Wrapper';
 import App from '../components/layout/App';
 import { fontSize } from '../constants/styles';
 
-const NotFoundPage = props => {
+interface NotfoundPageProps {
+  props: object;
+}
+
+const NotFoundPage: SFC<NotfoundPageProps> = props => {
   return (
     <App>
       <Wrapper>
