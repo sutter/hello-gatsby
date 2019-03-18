@@ -9,7 +9,6 @@ interface IndexPageProps {
 }
 
 const IndexPage: SFC<IndexPageProps> = props => {
-  console.log('plop');
   return (
     <App>
       <Wrapper>
