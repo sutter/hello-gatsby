@@ -19,6 +19,7 @@ const Container = styled.div`
   background: ${color.light};
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 `;
 
 const AppMain = styled.main`
