@@ -24,6 +24,7 @@ const base = css`
     color: ${color.neutralDark};
     background: ${color.light};
     overflow: hidden;
+    -webkit-overflow-scrolling: touch;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
