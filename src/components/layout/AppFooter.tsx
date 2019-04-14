@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import ExternalLink from '../base/ExternalLink';
+import Link from '../base/Link';
 import Wrapper from '../base/Wrapper';
 
 const Container = styled.footer`
@@ -12,10 +12,7 @@ const AppFooter = props => (
   <Container {...props}>
     <Wrapper>
       <p>
-        Made by{' '}
-        <ExternalLink href="http://sutterlity.fr">
-          Laurent Sutterlity
-        </ExternalLink>
+        Made by <Link to="http://sutterlity.fr">Laurent Sutterlity</Link>
       </p>
     </Wrapper>
   </Container>

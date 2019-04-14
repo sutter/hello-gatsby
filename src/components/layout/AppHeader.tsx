@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import posed from 'react-pose';
 import { route } from '../../constants/app';
 import AppLink from '../base/AppLink';
+import Link from '../base/Link';
 import ExternalLink from '../base/ExternalLink';
 import Wrapper from '../base/Wrapper';
 import NavButton from '../base/NavButton';
@@ -75,34 +76,14 @@ const Nav = styled.nav`
   }
 `;
 
-interface NavLinkProps {
-  to: string;
-  children: ReactNode;
-  activeStyle?: object;
-}
-
-const NavLink: SFC<NavLinkProps> = ({ to, children, ...rest }) => {
-  const internal = /^\/(?!\/)/.test(to);
-  if (internal) {
-    return (
-      <AppLink to={to} activeStyle={{ color: color.clr1Light }} {...rest}>
-        {children}
-      </AppLink>
-    );
-  } else {
-    return (
-      <ExternalLink href={to} {...rest}>
-        {children}
-      </ExternalLink>
-    );
-  }
-};
-
-const NavLinkStyled = styled(NavLink)`
+const NavLink = styled(Link)`
   display: block;
   text-align: center;
   padding: 1rem;
   text-decoration: none;
+  &.is-active {
+    color: ${color.neutral};
+  }
 `;
 
 const AppHeader = ({ navOpen, toggleNavMobile, closeNavMobile, ...rest }) => (
@@ -110,14 +91,14 @@ const AppHeader = ({ navOpen, toggleNavMobile, closeNavMobile, ...rest }) => (
     <Wrapper>
       <Grid>
         <GridItemBrand>
-          <AppLink to={route.home}>LOGO</AppLink>
+          <Link to={route.home}>LOGO</Link>
           <NavButton navOpen={navOpen} onClick={toggleNavMobile} />
         </GridItemBrand>
         <GridItemNav pose={navOpen ? 'open' : 'close'}>
           <Nav>
-            <NavLinkStyled to={route.home}>Home</NavLinkStyled>
-            <NavLinkStyled to={route.notFound}>Not found</NavLinkStyled>
-            <NavLinkStyled to="https://sutterlity.fr">Portfolio</NavLinkStyled>
+            <NavLink to={route.home}>Home</NavLink>
+            <NavLink to={route.notFound}>Not found</NavLink>
+            <NavLink to="https://sutterlity.fr">Portfolio</NavLink>
           </Nav>
         </GridItemNav>
       </Grid>
