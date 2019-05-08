@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
 import { InputBasicInterface } from '../../../appInterface';
@@ -19,6 +19,8 @@ const Element = styled.select`
   ${input.inputDisabled};
 `;
 
-const InputSelect: SFC<InputSelectProps> = props => <Element {...props} />;
+const InputSelect: React.SFC<InputSelectProps> = props => (
+  <Element {...props} />
+);
 
 export default InputSelect;

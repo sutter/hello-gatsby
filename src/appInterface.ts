@@ -20,9 +20,9 @@ export interface InputEditableInterface {
 
 export interface ButtonBaseInterface {
   type?: 'submit' | 'reset' | 'button';
-  onClick(event: any): void;
   disabled?: boolean;
   form?: string;
+  onClick(event: any): void;
 }
 
 export interface IconInterface {

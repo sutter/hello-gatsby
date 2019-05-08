@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
 import {
@@ -24,6 +24,8 @@ const Element = styled.textarea`
   ${input.inputReadOnly};
 `;
 
-const InputTextarea: SFC<InputTextareaProps> = props => <Element {...props} />;
+const InputTextarea: React.SFC<InputTextareaProps> = props => (
+  <Element {...props} />
+);
 
 export default InputTextarea;

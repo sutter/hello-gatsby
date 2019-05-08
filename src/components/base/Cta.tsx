@@ -1,7 +1,6 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import { css } from '@emotion/core';
-import AppLink from './AppLink';
-import ExternalLink from './ExternalLink';
+import Link from './Link';
 import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
 import { CtaSizesType, CtaThemesType } from '../../appTypes';
 
@@ -12,51 +11,28 @@ interface CtaProps {
   to: string;
 }
 
-const Cta: SFC<CtaProps> = ({
+const Cta: React.SFC<CtaProps> = ({
   children,
   to,
-  size,
-  theme,
-  disabled,
+  size = 'M',
+  theme = 'primary',
+  disabled = false,
   ...rest
 }) => {
-  const internal = /^\/(?!\/)/.test(to);
-  if (internal) {
-    return (
-      <AppLink
-        css={css`
+  return (
+    <Link
+      css={css`
           ${CtaBase};
           ${CtaSizes[size]}
           ${CtaThemes[theme]}
           ${disabled && CtaDisabled}
         `}
-        to={to}
-        {...rest}
-      >
-        {children}
-      </AppLink>
-    );
-  }
-  return (
-    <ExternalLink
-      css={css`
-        ${CtaBase}
-        ${CtaSizes[size]}
-        ${CtaThemes[theme]}
-        ${disabled && CtaDisabled}
-      `}
-      href={to}
+      to={to}
       {...rest}
     >
       {children}
-    </ExternalLink>
+    </Link>
   );
-};
-
-Cta.defaultProps = {
-  size: 'M',
-  theme: 'primary',
-  disabled: false,
 };
 
 export default Cta;

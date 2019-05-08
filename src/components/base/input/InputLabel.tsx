@@ -1,11 +1,11 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { fontSize, color } from '../../../constants/styles';
 
 interface InputLabelProps {
   className?: string;
   for?: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const Element = styled.label`
@@ -18,7 +18,7 @@ const Element = styled.label`
   }
 `;
 
-const InputLabel: SFC<InputLabelProps> = ({ children, ...rest }) => (
+const InputLabel: React.SFC<InputLabelProps> = ({ children, ...rest }) => (
   <Element {...rest}>{children}</Element>
 );
 

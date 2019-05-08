@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 
 interface ImageProps {
   src: string;
@@ -8,7 +8,7 @@ interface ImageProps {
   class?: string;
 }
 
-const Image: SFC<ImageProps> = ({ src, alt, width, height, ...rest }) => {
+const Image: React.SFC<ImageProps> = ({ src, alt, width, height, ...rest }) => {
   return <img src={src} alt={alt} width={width} height={height} {...rest} />;
 };
 

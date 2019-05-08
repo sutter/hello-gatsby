@@ -1,30 +1,36 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import Helmet from 'react-helmet';
-import config from '../../../config';
+import * as config from '../../config';
 
 interface SeoProps {
   lang?: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   image?: string;
 }
 
-const SEO: SFC<SeoProps> = props => {
+const SEO: React.SFC<SeoProps> = props => {
   const { title, description, image, lang } = props;
   return (
     <Helmet>
       <html lang={lang} />
 
       {/* Primary Meta Tags */}
-      <title>{title}</title>
-      <meta name="title" content={title} />
-      <meta name="description" content={description} />
+      <title>{title || config.siteTitle}</title>
+      <meta name="title" content={title || config.siteTitle} />
+      <meta
+        name="description"
+        content={description || config.siteDescription}
+      />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={config.siteUrl + config.pathPrefix} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={title || config.siteTitle} />
+      <meta
+        property="og:description"
+        content={description || config.siteDescription}
+      />
       {image && <meta property="og:image" content={image} />}
 
       {/* Twitter*/}
@@ -36,17 +42,14 @@ const SEO: SFC<SeoProps> = props => {
         property="twitter:url"
         content={config.siteUrl + config.pathPrefix}
       />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={title || config.siteTitle} />
+      <meta
+        name="twitter:description"
+        content={description || config.siteDescription}
+      />
       {image && <meta name="twitter:image" content={image} />}
     </Helmet>
   );
-};
-
-SEO.defaultProps = {
-  lang: config.siteLanguage,
-  title: config.siteTitle,
-  description: config.siteDescription,
 };
 
 export default SEO;

@@ -1,12 +1,12 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import posed from 'react-pose';
 import { ButtonBaseInterface } from '../../appInterface';
-import { mqUp, color } from '../../constants/styles';
+import { mqUp, color, breakpoint } from '../../constants/styles';
 
 interface ButtonProps extends ButtonBaseInterface {
-  navOpen: Boolean;
+  navOpen: boolean;
 }
 
 const Button = styled.button`
@@ -18,7 +18,7 @@ const Button = styled.button`
   height: 3rem;
   cursor: pointer;
   margin-left: auto;
-  ${mqUp('mainNav')} {
+  ${mqUp(breakpoint.mainNav)} {
     display: none;
   }
 `;
@@ -50,7 +50,7 @@ const Lines = css`
   border-radius: 666rem;
 `;
 
-const NavButton: SFC<ButtonProps> = ({ onClick, navOpen, ...rest }) => (
+const NavButton: React.SFC<ButtonProps> = ({ onClick, navOpen, ...rest }) => (
   <Button onClick={onClick} {...rest}>
     <Text>Menu</Text>
     <LineTop css={Lines} pose={navOpen ? 'open' : 'close'} />

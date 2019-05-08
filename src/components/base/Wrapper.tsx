@@ -1,13 +1,13 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { mqUp } from '../../constants/styles';
+import { mqUp, breakpoint } from '../../constants/styles';
 import { WrapperSizesType } from '../../appTypes';
 
 interface WrapperProps {
   className?: string;
   size?: WrapperSizesType;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const sizes = {
@@ -31,21 +31,17 @@ const Container = styled.div<WrapperProps>`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  ${props => sizes[props.size]};
-  ${mqUp('smartphone')} {
+  ${props => sizes[(props.size = 'M')]};
+  ${mqUp(breakpoint.smartphone)} {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 `;
 
-const Wrapper: SFC<WrapperProps> = ({ children, className, size }) => (
+const Wrapper: React.SFC<WrapperProps> = ({ children, className, size }) => (
   <Container className={className} size={size}>
     {children}
   </Container>
 );
-
-Wrapper.defaultProps = {
-  size: 'M',
-};
 
 export default Wrapper;

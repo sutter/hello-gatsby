@@ -1,18 +1,18 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 
 interface LinkProps {
   to: string;
-  children: ReactNode | string;
+  children: React.ReactNode | string;
   activeClassName?: string;
 }
 
 interface ExternalLinkProps {
   href: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const AppLink: SFC<LinkProps> = ({
+const AppLink: React.SFC<LinkProps> = ({
   children,
   to,
   activeClassName,
@@ -29,7 +29,11 @@ const AppLink: SFC<LinkProps> = ({
   );
 };
 
-const ExternalLink: SFC<ExternalLinkProps> = ({ children, href, ...rest }) => {
+const ExternalLink: React.SFC<ExternalLinkProps> = ({
+  children,
+  href,
+  ...rest
+}) => {
   return (
     <a href={href} rel="noopener noreferrer" target="_blank" {...rest}>
       {children}
@@ -37,7 +41,12 @@ const ExternalLink: SFC<ExternalLinkProps> = ({ children, href, ...rest }) => {
   );
 };
 
-const Link: SFC<LinkProps> = ({ to, children, activeClassName, ...rest }) => {
+const Link: React.SFC<LinkProps> = ({
+  to,
+  children,
+  activeClassName,
+  ...rest
+}) => {
   const internal = /^\/(?!\/)/.test(to);
   if (internal) {
     return (

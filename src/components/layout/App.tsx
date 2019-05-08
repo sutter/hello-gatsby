@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import SEO from '../base/Seo';
@@ -30,7 +30,7 @@ interface AppProps {
   title?: string;
   description?: string;
   image?: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 interface AppState {
@@ -52,10 +52,10 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
   render() {
-    const { title, description, image, children } = this.props;
+    const { title, description, children } = this.props;
     return (
       <Container>
-        <SEO title={title} description={description} image={image} />
+        <SEO title={title} description={description} />
         <Global
           styles={css`
             ${normalize}

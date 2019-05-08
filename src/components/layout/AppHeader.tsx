@@ -1,13 +1,23 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import posed from 'react-pose';
 import { route } from '../../constants/app';
-import AppLink from '../base/AppLink';
 import Link from '../base/Link';
-import ExternalLink from '../base/ExternalLink';
 import Wrapper from '../base/Wrapper';
 import NavButton from '../base/NavButton';
-import { mqUp, mqDown, color, header } from '../../constants/styles';
+import {
+  mqUp,
+  mqDown,
+  color,
+  header,
+  breakpoint,
+} from '../../constants/styles';
+
+interface AppHeaderProps {
+  navOpen: boolean;
+  toggleNavMobile(): void;
+  closeNavMobile(): void;
+}
 
 const Container = styled.header`
   position: relative;
@@ -16,11 +26,11 @@ const Container = styled.header`
 `;
 
 const Grid = styled.div`
-  ${mqUp('mainNav')} {
+  ${mqUp(breakpoint.mainNav)} {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ${mqUp('mainNav')} {
+    ${mqUp(breakpoint.mainNav)} {
       height: ${header.heightBase};
     }
   }
@@ -32,7 +42,7 @@ const GridItemNavPose = posed.div({
 });
 
 const GridItemNav = styled(GridItemNavPose)`
-  ${mqDown('mainNav')} {
+  ${mqDown(breakpoint.mainNav)} {
     z-index: 1;
     position: absolute;
     top: 0;
@@ -42,7 +52,7 @@ const GridItemNav = styled(GridItemNavPose)`
     background: ${color.light};
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.02);
   }
-  ${mqUp('mainNav')} {
+  ${mqUp(breakpoint.mainNav)} {
     display: flex;
     align-items: center;
     &:not(:first-of-type) {
@@ -54,7 +64,7 @@ const GridItemNav = styled(GridItemNavPose)`
 const GridItemBrand = styled.div`
   display: flex;
   align-items: center;
-  ${mqDown('mainNav')} {
+  ${mqDown(breakpoint.mainNav)} {
     z-index: 2;
     position: relative;
     height: ${header.heightSmall};
@@ -62,12 +72,12 @@ const GridItemBrand = styled.div`
 `;
 
 const Nav = styled.nav`
-  ${mqDown('mainNav')} {
+  ${mqDown(breakpoint.mainNav)} {
     display: block;
     padding-top: calc(${header.heightSmall} + 2rem);
     padding-bottom: 2rem;
   }
-  ${mqUp('mainNav')} {
+  ${mqUp(breakpoint.mainNav)} {
     display: flex;
     align-items: center;
     > * {
@@ -86,7 +96,12 @@ const NavLink = styled(Link)`
   }
 `;
 
-const AppHeader = ({ navOpen, toggleNavMobile, closeNavMobile, ...rest }) => (
+const AppHeader: React.SFC<AppHeaderProps> = ({
+  navOpen,
+  toggleNavMobile,
+  closeNavMobile,
+  ...rest
+}) => (
   <Container {...rest}>
     <Wrapper>
       <Grid>

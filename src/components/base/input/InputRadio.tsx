@@ -1,9 +1,9 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { color, state } from '../../../constants/styles';
 import { InputBasicInterface } from '../../../appInterface';
 interface InputRadioProps extends InputBasicInterface {
-  children: ReactNode;
+  children: React.ReactNode;
   checked?: boolean;
   onChange?(event: any): void;
 }
@@ -40,7 +40,7 @@ const Label = styled.label<InputRadioProps>`
   }
 `;
 
-const InputRadio: SFC<InputRadioProps> = ({
+const InputRadio: React.SFC<InputRadioProps> = ({
   className,
   children,
   checked,

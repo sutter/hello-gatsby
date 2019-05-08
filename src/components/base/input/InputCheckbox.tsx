@@ -1,11 +1,11 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { color, state, radius } from '../../../constants/styles';
 import IconCheck from '../icons/IconCheck';
 import { InputBasicInterface } from '../../../appInterface';
 
 interface InputCheckboxProps extends InputBasicInterface {
-  children: ReactNode;
+  children: React.ReactNode;
   checked?: boolean;
   onChange?(event: any): void;
 }
@@ -50,7 +50,7 @@ const Label = styled.label<InputCheckboxProps>`
   }
 `;
 
-const InputCheckbox: SFC<InputCheckboxProps> = ({
+const InputCheckbox: React.SFC<InputCheckboxProps> = ({
   className,
   children,
   checked,

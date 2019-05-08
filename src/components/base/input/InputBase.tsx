@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import * as input from '../../../styles/inputs';
 import {
@@ -22,7 +22,9 @@ const Element = styled.input`
   ${input.inputReadOnly};
 `;
 
-const InputBase: SFC<InputBaseInterface> = props => <Element {...props} />;
+const InputBase: React.SFC<InputBaseInterface> = props => (
+  <Element {...props} />
+);
 
 InputBase.defaultProps = {
   type: 'text',

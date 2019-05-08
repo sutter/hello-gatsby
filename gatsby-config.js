@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('./src/config');
 
 /**
  * Load API KEY
@@ -33,6 +33,8 @@ module.exports = {
 
   /* Plugins */
   plugins: [
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-typescript-checker',
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
@@ -94,14 +96,6 @@ module.exports = {
             host: null,
           },
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typescript`,
-      options: {
-        isTSX: true, // defaults to false
-        jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
       },
     },
   ],

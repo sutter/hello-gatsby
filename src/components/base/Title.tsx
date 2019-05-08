@@ -1,4 +1,4 @@
-import React, { SFC, ReactNode } from 'react';
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { fontWeight, lineHeight } from '../../constants/styles';
 import { TitleNodeType } from '../../appTypes';
@@ -6,7 +6,7 @@ import { TitleNodeType } from '../../appTypes';
 interface TitleProps {
   className?: string;
   as?: TitleNodeType;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const Element = styled.p<TitleProps>`
@@ -14,14 +14,10 @@ const Element = styled.p<TitleProps>`
   line-height: ${lineHeight.L};
 `;
 
-const Title: SFC<TitleProps> = ({ children, as, ...rest }) => (
+const Title: React.SFC<TitleProps> = ({ children, as = 'p', ...rest }) => (
   <Element as={as} {...rest}>
     {children}
   </Element>
 );
-
-Title.defaultProps = {
-  as: 'p',
-};
 
 export default Title;
