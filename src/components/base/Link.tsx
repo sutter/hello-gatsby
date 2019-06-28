@@ -12,7 +12,7 @@ interface ExternalLinkProps {
   children: React.ReactNode;
 }
 
-const AppLink: React.SFC<LinkProps> = ({
+const AppLink: React.FunctionComponent<LinkProps> = ({
   children,
   to,
   activeClassName,
@@ -29,7 +29,7 @@ const AppLink: React.SFC<LinkProps> = ({
   );
 };
 
-const ExternalLink: React.SFC<ExternalLinkProps> = ({
+const ExternalLink: React.FunctionComponent<ExternalLinkProps> = ({
   children,
   href,
   ...rest
@@ -41,7 +41,7 @@ const ExternalLink: React.SFC<ExternalLinkProps> = ({
   );
 };
 
-const Link: React.SFC<LinkProps> = ({
+const Link: React.FunctionComponent<LinkProps> = ({
   to,
   children,
   activeClassName,

@@ -18,8 +18,9 @@ const Element = styled.label`
   }
 `;
 
-const InputLabel: React.SFC<InputLabelProps> = ({ children, ...rest }) => (
-  <Element {...rest}>{children}</Element>
-);
+const InputLabel: React.FunctionComponent<InputLabelProps> = ({
+  children,
+  ...rest
+}) => <Element {...rest}>{children}</Element>;
 
 export default InputLabel;

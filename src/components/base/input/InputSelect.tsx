@@ -19,7 +19,7 @@ const Element = styled.select`
   ${input.inputDisabled};
 `;
 
-const InputSelect: React.SFC<InputSelectProps> = props => (
+const InputSelect: React.FunctionComponent<InputSelectProps> = props => (
   <Element {...props} />
 );
 

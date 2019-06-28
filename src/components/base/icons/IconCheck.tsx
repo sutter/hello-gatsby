@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IconInterface } from '../../../appInterface';
 
-const IconCheck: React.SFC<IconInterface> = ({
+const IconCheck: React.FunctionComponent<IconInterface> = ({
   size = 16,
   stroke = 'currentColor',
   strokeWidth = 2,

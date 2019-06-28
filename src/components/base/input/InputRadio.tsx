@@ -40,7 +40,7 @@ const Label = styled.label<InputRadioProps>`
   }
 `;
 
-const InputRadio: React.SFC<InputRadioProps> = ({
+const InputRadio: React.FunctionComponent<InputRadioProps> = ({
   className,
   children,
   checked,

@@ -11,7 +11,7 @@ interface CtaProps {
   to: string;
 }
 
-const Cta: React.SFC<CtaProps> = ({
+const Cta: React.FunctionComponent<CtaProps> = ({
   children,
   to,
   size = 'M',

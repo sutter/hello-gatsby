@@ -8,7 +8,13 @@ interface ImageProps {
   class?: string;
 }
 
-const Image: React.SFC<ImageProps> = ({ src, alt, width, height, ...rest }) => {
+const Image: React.FunctionComponent<ImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  ...rest
+}) => {
   return <img src={src} alt={alt} width={width} height={height} {...rest} />;
 };
 

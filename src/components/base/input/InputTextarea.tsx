@@ -24,7 +24,7 @@ const Element = styled.textarea`
   ${input.inputReadOnly};
 `;
 
-const InputTextarea: React.SFC<InputTextareaProps> = props => (
+const InputTextarea: React.FunctionComponent<InputTextareaProps> = props => (
   <Element {...props} />
 );
 

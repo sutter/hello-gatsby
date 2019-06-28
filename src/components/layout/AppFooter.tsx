@@ -12,7 +12,7 @@ const Container = styled.footer`
   padding-bottom: 2rem;
 `;
 
-const AppFooter: React.SFC<FooterProps> = props => (
+const AppFooter: React.FunctionComponent<FooterProps> = props => (
   <Container {...props}>
     <Wrapper>
       <p>

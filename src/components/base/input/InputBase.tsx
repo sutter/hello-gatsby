@@ -22,7 +22,7 @@ const Element = styled.input`
   ${input.inputReadOnly};
 `;
 
-const InputBase: React.SFC<InputBaseInterface> = props => (
+const InputBase: React.FunctionComponent<InputBaseInterface> = props => (
   <Element {...props} />
 );
 

@@ -50,7 +50,7 @@ const Label = styled.label<InputCheckboxProps>`
   }
 `;
 
-const InputCheckbox: React.SFC<InputCheckboxProps> = ({
+const InputCheckbox: React.FunctionComponent<InputCheckboxProps> = ({
   className,
   children,
   checked,

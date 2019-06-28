@@ -96,7 +96,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-const AppHeader: React.SFC<AppHeaderProps> = ({
+const AppHeader: React.FunctionComponent<AppHeaderProps> = ({
   navOpen,
   toggleNavMobile,
   closeNavMobile,

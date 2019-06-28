@@ -9,7 +9,7 @@ interface SeoProps {
   image?: string;
 }
 
-const SEO: React.SFC<SeoProps> = props => {
+const SEO: React.FunctionComponent<SeoProps> = props => {
   const { title, description, image, lang } = props;
   return (
     <Helmet>

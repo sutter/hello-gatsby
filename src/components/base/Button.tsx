@@ -10,7 +10,7 @@ interface ButtonProps extends ButtonBaseInterface {
   children: React.ReactNode;
 }
 
-const Button: React.SFC<ButtonProps> = ({
+const Button: React.FunctionComponent<ButtonProps> = ({
   children,
   size = 'M',
   theme = 'primary',

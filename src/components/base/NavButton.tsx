@@ -50,7 +50,11 @@ const Lines = css`
   border-radius: 666rem;
 `;
 
-const NavButton: React.SFC<ButtonProps> = ({ onClick, navOpen, ...rest }) => (
+const NavButton: React.FunctionComponent<ButtonProps> = ({
+  onClick,
+  navOpen,
+  ...rest
+}) => (
   <Button onClick={onClick} {...rest}>
     <Text>Menu</Text>
     <LineTop css={Lines} pose={navOpen ? 'open' : 'close'} />

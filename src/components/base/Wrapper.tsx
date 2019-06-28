@@ -38,7 +38,11 @@ const Container = styled.div<WrapperProps>`
   }
 `;
 
-const Wrapper: React.SFC<WrapperProps> = ({ children, className, size }) => (
+const Wrapper: React.FunctionComponent<WrapperProps> = ({
+  children,
+  className,
+  size,
+}) => (
   <Container className={className} size={size}>
     {children}
   </Container>
