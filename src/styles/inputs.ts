@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { color, radius, state } from '../constants/styles';
+import { Color, Radius, State } from '../enums/appStyles';
 
 export const paddingHorizontal = '2rem';
 export const inputHeight = '4rem';
@@ -7,26 +7,26 @@ export const inputHeight = '4rem';
 export const inputBase = css`
   display: block;
   width: 100%;
-  border: 1px solid ${color.borderInput};
-  background-color: ${color.light};
+  border: 1px solid ${Color.BorderInput};
+  background-color: ${Color.Light};
   box-shadow: none;
-  border-radius: ${radius.S};
+  border-radius: ${Radius.S};
   min-height: ${inputHeight};
   &:hover {
-    border-color: ${color.borderInputDark};
+    border-color: ${Color.BorderInputDark};
   }
 `;
 
 export const inputReadOnly = css`
   &:read-only {
-    background-color: ${color.borderInput};
+    background-color: ${Color.BorderInput};
     box-shadow: none;
   }
 `;
 
 export const inputDisabled = css`
   &:disabled {
-    opacity: ${state.disabledOpacity};
+    opacity: ${State.DisabledOpacity};
     pointer-events: none;
   }
 `;

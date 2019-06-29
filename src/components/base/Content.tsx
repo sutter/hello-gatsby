@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import {
-  color,
-  fontWeight,
-  lineHeight,
-  radius,
-  fontSize,
-  fontFamily,
-} from '../../constants/styles';
+  Color,
+  FontWeight,
+  LineHeight,
+  Radius,
+  FontSize,
+  FontFamily,
+} from '../../enums/appStyles';
 
 const title = css`
-  font-weight: ${fontWeight.bold};
-  line-height: ${lineHeight.L};
+  font-weight: ${FontWeight.Bold};
+  line-height: ${LineHeight.L};
 `;
 
 const spacing = css`
@@ -41,37 +41,37 @@ const Content = styled.div`
   h1 {
     ${spacing};
     ${title};
-    font-size: ${fontSize.XXXL};
+    font-size: ${FontSize.XXXL};
   }
 
   h2 {
     ${spacing};
     ${title};
-    font-size: ${fontSize.XXL};
+    font-size: ${FontSize.XXL};
   }
 
   h3 {
     ${spacing};
     ${title};
-    font-size: ${fontSize.XL};
+    font-size: ${FontSize.XL};
   }
 
   h4 {
     ${spacing};
     ${title};
-    font-size: ${fontSize.L};
+    font-size: ${FontSize.L};
   }
 
   h5 {
     ${spacing};
     ${title};
-    font-size: ${fontSize.M};
+    font-size: ${FontSize.M};
   }
 
   h6 {
     ${spacing};
     ${title};
-    font-size: ${fontSize.S};
+    font-size: ${FontSize.S};
   }
 
   p {
@@ -80,7 +80,7 @@ const Content = styled.div`
       padding: 0.25rem 0.75rem;
       background: hsla(0, 0%, 0%, 0.04);
       border: 1px solid #eee;
-      border-radius: ${radius.XS};
+      border-radius: ${Radius.XS};
     }
   }
 
@@ -100,7 +100,7 @@ const Content = styled.div`
 
   code {
     font-size: 80%;
-    font-family: ${fontFamily.code};
+    font-family: ${FontFamily.Code};
   }
 
   pre {
@@ -134,7 +134,7 @@ const Content = styled.div`
   }
 
   dt {
-    font-weight: ${fontWeight.bold};
+    font-weight: ${FontWeight.Bold};
     &:not(:first-of-type) {
       margin-top: 1.2rem;
     }
@@ -143,7 +143,7 @@ const Content = styled.div`
   /* Separator */
   hr {
     height: 0;
-    border: 1px solid ${color.neutralLighter};
+    border: 1px solid ${Color.NeutralLighter};
     ${spacing};
   }
 
@@ -157,22 +157,22 @@ const Content = styled.div`
     ${spacing};
     width: 100%;
     max-width: 100%;
-    line-height: ${lineHeight.M};
+    line-height: ${LineHeight.M};
   }
 
   thead {
     th {
       padding: 1rem;
       vertical-align: bottom;
-      border-bottom: 2px solid ${color.neutralLighter};
-      font-weight: ${fontWeight.bold};
+      border-bottom: 2px solid ${Color.NeutralLighter};
+      font-weight: ${FontWeight.Bold};
     }
   }
 
   tbody {
     td {
       padding: 1rem;
-      border-bottom: 1px solid ${color.neutralLighter};
+      border-bottom: 1px solid ${Color.NeutralLighter};
     }
   }
 `;

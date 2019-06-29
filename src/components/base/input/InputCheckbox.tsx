@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { color, state, radius } from '../../../constants/styles';
+import { Color, State, Radius } from '../../../enums/appStyles';
 import IconCheck from '../icons/IconCheck';
 import { InputBasicInterface } from '../../../appInterface';
 
@@ -22,7 +22,7 @@ const Icon = styled(IconCheck)`
 const Label = styled.label<InputCheckboxProps>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
-  opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
+  opacity: ${props => (props.disabled ? State.DisabledOpacity : 1)};
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   &::before {
     content: '';
@@ -34,9 +34,9 @@ const Label = styled.label<InputCheckboxProps>`
     height: ${bulletSize}rem;
     box-shadow: inset 0 0 0
       ${props =>
-        props.checked ? `.1rem ${color.clr1}` : `1px ${color.borderInput}`};
-    background: ${props => (props.checked ? color.clr1 : 'transparent')};
-    border-radius: ${radius.XS};
+        props.checked ? `.1rem ${Color.Clr1}` : `1px ${Color.BorderInput}`};
+    background: ${props => (props.checked ? Color.Clr1 : 'transparent')};
+    border-radius: ${Radius.XS};
     transition: all 0.3s ease-in-out;
   }
   &:hover {
@@ -44,8 +44,8 @@ const Label = styled.label<InputCheckboxProps>`
       box-shadow: inset 0 0 0
         ${props =>
           props.checked
-            ? `.6rem ${color.clr1}`
-            : `1px ${color.borderInputDark}`};
+            ? `.6rem ${Color.Clr1}`
+            : `1px ${Color.BorderInputDark}`};
     }
   }
 `;
@@ -60,7 +60,7 @@ const InputCheckbox: React.FunctionComponent<InputCheckboxProps> = ({
   return (
     <Label checked={checked} disabled={disabled} className={className}>
       <Icon
-        stroke={checked ? color.light : 'transparent'}
+        stroke={checked ? Color.Light : 'transparent'}
         size={bulletSize * 10}
         strokeWidth={2}
       />

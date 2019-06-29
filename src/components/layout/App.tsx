@@ -6,7 +6,7 @@ import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import base from '../../styles/base';
 import normalize from '../../styles/normalize';
-import { color } from '../../constants/styles';
+import { Color } from '../../enums/appStyles';
 
 const Container = styled.div`
   position: absolute;
@@ -16,7 +16,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: ${color.light};
+  background: ${Color.Light};
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

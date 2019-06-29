@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import posed from 'react-pose';
 import { ButtonBaseInterface } from '../../appInterface';
-import { mqUp, color, breakpoint } from '../../constants/styles';
+import { MqUp, Color, Breakpoint } from '../../enums/appStyles';
 
 interface ButtonProps extends ButtonBaseInterface {
   navOpen: boolean;
@@ -18,7 +18,7 @@ const Button = styled.button`
   height: 3rem;
   cursor: pointer;
   margin-left: auto;
-  ${mqUp(breakpoint.mainNav)} {
+  ${MqUp(Breakpoint.MainNav)} {
     display: none;
   }
 `;
@@ -46,7 +46,7 @@ const Lines = css`
   left: calc(50% - 1rem);
   height: 0.2rem;
   width: 2rem;
-  background: ${color.clr1};
+  background: ${Color.Clr1};
   border-radius: 666rem;
 `;
 

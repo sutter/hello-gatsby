@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { fontFamily, fontWeight, lineHeight, color } from '../constants/styles';
+import { FontFamily, FontWeight, LineHeight, Color } from '../enums/appStyles';
 
 const base = css`
   *,
@@ -16,13 +16,13 @@ const base = css`
   }
   body {
     height: 100%;
-    font-family: ${fontFamily.primary};
+    font-family: ${FontFamily.Primary};
     font-size: 1.6rem;
-    font-weight: ${fontWeight.regular};
-    line-height: ${lineHeight.L};
+    font-weight: ${FontWeight.Regular};
+    line-height: ${LineHeight.L};
     text-rendering: optimizeLegibility;
-    color: ${color.neutralDark};
-    background: ${color.light};
+    color: ${Color.NeutralDark};
+    background: ${Color.Light};
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-text-size-adjust: 100%;
@@ -83,12 +83,12 @@ const base = css`
   }
   /* Links */
   a {
-    color: ${color.clr1};
+    color: ${Color.Clr1};
     transition: color 0.3s ease-in-out;
     &:active,
     &:hover,
     &:focus {
-      color: ${color.clr1Light};
+      color: ${Color.Clr1Light};
     }
     &:focus {
       outline: none;
@@ -184,7 +184,7 @@ const base = css`
     }
     &:-moz-focusring {
       color: transparent;
-      text-shadow: 0 0 0 ${color.neutralDark};
+      text-shadow: 0 0 0 ${Color.NeutralDark};
     }
   }
   fieldset {
@@ -193,7 +193,7 @@ const base = css`
     border: 0;
   }
   ::placeholder {
-    color: ${color.neutralLight};
+    color: ${Color.NeutralLight};
   }
 
   input[type='number']::-webkit-outer-spin-button,
@@ -208,7 +208,7 @@ const base = css`
   /* Other */
   hr {
     border: 0;
-    border-top: 1px solid ${color.neutral};
+    border-top: 1px solid ${Color.Neutral};
     margin: 4rem 0;
   }
   /* Table */

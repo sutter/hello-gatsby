@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { fontWeight, lineHeight } from '../../constants/styles';
+import { FontWeight, LineHeight } from '../../enums/appStyles';
 import { TitleNodeType } from '../../appTypes';
 
 interface TitleProps {
@@ -10,8 +10,8 @@ interface TitleProps {
 }
 
 const Element = styled.p<TitleProps>`
-  font-weight: ${fontWeight.bold};
-  line-height: ${lineHeight.L};
+  font-weight: ${FontWeight.Bold};
+  line-height: ${LineHeight.L};
 `;
 
 const Title: React.FunctionComponent<TitleProps> = ({

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { color, state } from '../../../constants/styles';
+import { Color, State } from '../../../enums/appStyles';
 import { InputBasicInterface } from '../../../appInterface';
 interface InputRadioProps extends InputBasicInterface {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ const bulletSize = 1.6;
 const Label = styled.label<InputRadioProps>`
   position: relative;
   padding-left: ${bulletSize + 0.75}rem;
-  opacity: ${props => (props.disabled ? state.disabledOpacity : 1)};
+  opacity: ${props => (props.disabled ? State.DisabledOpacity : 1)};
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   &::before {
     content: '';
@@ -25,7 +25,7 @@ const Label = styled.label<InputRadioProps>`
     height: ${bulletSize}rem;
     box-shadow: inset 0 0 0
       ${props =>
-        props.checked ? `.6rem ${color.clr1}` : `1px ${color.borderInput}`};
+        props.checked ? `.6rem ${Color.Clr1}` : `1px ${Color.BorderInput}`};
     border-radius: 50%;
     transition: box-shadow 0.3s ease-in-out;
   }
@@ -34,8 +34,8 @@ const Label = styled.label<InputRadioProps>`
       box-shadow: inset 0 0 0
         ${props =>
           props.checked
-            ? `.6rem ${color.clr1}`
-            : `1px ${color.borderInputDark}`};
+            ? `.6rem ${Color.Clr1}`
+            : `1px ${Color.BorderInputDark}`};
     }
   }
 `;

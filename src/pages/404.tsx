@@ -2,7 +2,7 @@ import * as React from 'react';
 import Title from '../components/base/Title';
 import Wrapper from '../components/base/Wrapper';
 import App from '../components/layout/App';
-import { fontSize } from '../constants/styles';
+import { FontSize } from '../enums/appStyles';
 
 const NotFoundPage = () => {
   return (
@@ -11,7 +11,7 @@ const NotFoundPage = () => {
         <Title
           as="h1"
           css={{
-            fontSize: fontSize.XXXL,
+            fontSize: FontSize.XXXL,
           }}
         >
           Not Found

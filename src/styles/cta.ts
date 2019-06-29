@@ -1,27 +1,27 @@
 import { css } from '@emotion/core';
-import { radius, state, color, fontSize } from '../constants/styles';
+import { Radius, State, Color, FontSize } from '../enums/appStyles';
 
 const linkState = '&:hover, &:focus, &:active';
 
 export const CtaThemes = {
   primary: css`
-    color: ${color.light};
-    background: ${color.clr1};
-    border-color: ${color.clr1};
+    color: ${Color.Light};
+    background: ${Color.Clr1};
+    border-color: ${Color.Clr1};
     ${linkState} {
-      color: ${color.light};
-      background: ${color.clr1Light};
-      border-color: ${color.clr1Light};
+      color: ${Color.Light};
+      background: ${Color.Clr1Light};
+      border-color: ${Color.Clr1Light};
     }
   `,
   neutral: css`
-    color: ${color.clr1};
+    color: ${Color.Clr1};
     background: 'transparent';
-    border-color: ${color.clr1Light};
+    border-color: ${Color.Clr1Light};
     ${linkState} {
-      color: ${color.clr1};
+      color: ${Color.Clr1};
       background: 'transparent';
-      border-color: ${color.clr1};
+      border-color: ${Color.Clr1};
     }
   `,
 };
@@ -35,7 +35,7 @@ export const CtaSizes = {
   S: css`
     min-height: 3rem;
     padding: 0.8rem 1rem;
-    font-size: ${fontSize.XS};
+    font-size: ${FontSize.XS};
   `,
 };
 
@@ -45,7 +45,7 @@ export const CtaBase = css`
   text-decoration: none;
   font-family: inherit;
   line-height: 1;
-  border-radius: ${radius.S};
+  border-radius: ${Radius.S};
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -54,6 +54,6 @@ export const CtaBase = css`
 `;
 
 export const CtaDisabled = css`
-  opacity: ${state.disabledOpacity};
+  opacity: ${State.DisabledOpacity};
   pointer-events: none;
 `;

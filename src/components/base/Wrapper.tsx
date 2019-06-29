@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { mqUp, breakpoint } from '../../constants/styles';
+import { MqUp, Breakpoint } from '../../enums/appStyles';
 import { WrapperSizesType } from '../../appTypes';
 
 interface WrapperProps {
@@ -32,7 +32,7 @@ const Container = styled.div<WrapperProps>`
   margin-right: auto;
   width: 100%;
   ${props => sizes[(props.size = 'M')]};
-  ${mqUp(breakpoint.smartphone)} {
+  ${MqUp(Breakpoint.Smartphone)} {
     padding-left: 2rem;
     padding-right: 2rem;
   }

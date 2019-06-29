@@ -1,17 +1,11 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import posed from 'react-pose';
-import { route } from '../../constants/app';
+import { Route } from '../../enums/app';
 import Link from '../base/Link';
 import Wrapper from '../base/Wrapper';
 import NavButton from '../base/NavButton';
-import {
-  mqUp,
-  mqDown,
-  color,
-  header,
-  breakpoint,
-} from '../../constants/styles';
+import { MqUp, MqDown, Color, Header, Breakpoint } from '../../enums/appStyles';
 
 interface AppHeaderProps {
   navOpen: boolean;
@@ -26,12 +20,12 @@ const Container = styled.header`
 `;
 
 const Grid = styled.div`
-  ${mqUp(breakpoint.mainNav)} {
+  ${MqUp(Breakpoint.MainNav)} {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ${mqUp(breakpoint.mainNav)} {
-      height: ${header.heightBase};
+    ${MqUp(Breakpoint.MainNav)} {
+      height: ${Header.HeightBase};
     }
   }
 `;
@@ -42,17 +36,17 @@ const GridItemNavPose = posed.div({
 });
 
 const GridItemNav = styled(GridItemNavPose)`
-  ${mqDown(breakpoint.mainNav)} {
+  ${MqDown(Breakpoint.MainNav)} {
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     overflow: hidden;
-    background: ${color.light};
+    background: ${Color.Light};
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.02);
   }
-  ${mqUp(breakpoint.mainNav)} {
+  ${MqUp(Breakpoint.MainNav)} {
     display: flex;
     align-items: center;
     &:not(:first-of-type) {
@@ -64,20 +58,20 @@ const GridItemNav = styled(GridItemNavPose)`
 const GridItemBrand = styled.div`
   display: flex;
   align-items: center;
-  ${mqDown(breakpoint.mainNav)} {
+  ${MqDown(Breakpoint.MainNav)} {
     z-index: 2;
     position: relative;
-    height: ${header.heightSmall};
+    height: ${Header.HeightSmall};
   }
 `;
 
 const Nav = styled.nav`
-  ${mqDown(breakpoint.mainNav)} {
+  ${MqDown(Breakpoint.MainNav)} {
     display: block;
-    padding-top: calc(${header.heightSmall} + 2rem);
+    padding-top: calc(${Header.HeightSmall} + 2rem);
     padding-bottom: 2rem;
   }
-  ${mqUp(breakpoint.mainNav)} {
+  ${MqUp(Breakpoint.MainNav)} {
     display: flex;
     align-items: center;
     > * {
@@ -92,7 +86,7 @@ const NavLink = styled(Link)`
   padding: 1rem;
   text-decoration: none;
   &.is-active {
-    color: ${color.neutral};
+    color: ${Color.Neutral};
   }
 `;
 
@@ -106,13 +100,13 @@ const AppHeader: React.FunctionComponent<AppHeaderProps> = ({
     <Wrapper>
       <Grid>
         <GridItemBrand>
-          <Link to={route.home}>LOGO</Link>
+          <Link to={Route.Home}>LOGO</Link>
           <NavButton navOpen={navOpen} onClick={toggleNavMobile} />
         </GridItemBrand>
         <GridItemNav pose={navOpen ? 'open' : 'close'}>
           <Nav>
-            <NavLink to={route.home}>Home</NavLink>
-            <NavLink to={route.notFound}>Not found</NavLink>
+            <NavLink to={Route.Home}>Home</NavLink>
+            <NavLink to={Route.NotFound}>Not found</NavLink>
             <NavLink to="https://sutterlity.fr">Portfolio</NavLink>
           </Nav>
         </GridItemNav>
