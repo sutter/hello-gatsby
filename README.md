@@ -11,6 +11,7 @@
 - Sharp image processing library: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=gatsby-plugin-sharp)
 - Sitemap: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap)
 - Robots.txt : [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt/?=gatsby-plugin-robots-txt)
+- Files generator : [Plop](https://github.com/amwmedia/plop)
 
 ## 🚀 Prerequisites
 
@@ -80,6 +81,12 @@
 
     ```sh
     gatsby serve
+    ```
+
+1.  **Create new file**
+
+    ```sh
+    yarn new
     ```
 
 ## 💫 Deploy
