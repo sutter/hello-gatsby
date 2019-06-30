@@ -106,8 +106,9 @@ const AppHeader: React.FunctionComponent<AppHeaderProps> = ({
         <GridItemNav pose={navOpen ? 'open' : 'close'}>
           <Nav>
             <NavLink to={Route.Home}>Home</NavLink>
-            <NavLink to={Route.NotFound}>Not found</NavLink>
-            <NavLink to="https://sutterlity.fr">Portfolio</NavLink>
+            <NavLink to="https://github.com/sutter/hello-gatsby">
+              Repository
+            </NavLink>
           </Nav>
         </GridItemNav>
       </Grid>

@@ -1,4 +1,35 @@
-const config = require('./src/config');
+/**
+ * Configuration
+ */
+
+const appConfig = {
+  // Language Tag on <html> element
+  language: 'fr',
+  // Domain of your site. No trailing slash!
+  siteUrl: 'https://hello-gatsby-starter.netlify.com',
+  // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "/portfolio"
+  pathPrefix: '/',
+
+  /**
+   * Site information
+   */
+  title: 'Hello Gatsby - simple stater for Gatsby',
+  titleShort: 'Hello Gatsby',
+  description: 'Simple stater for Gatsby width Emotion.js',
+  author: 'Laurent Sutterlity',
+  email: 'laurent@sutterlity.fr',
+
+  /**
+   * Social
+   */
+  twitterUser: '@sutterlity',
+
+  /**
+   * Manifest and Progress color
+   */
+  themeColor: '#663399',
+  backgroundColor: '#663399',
+};
 
 /**
  * Load API KEY
@@ -11,27 +42,12 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-/* Get env */
-
-const {
-  NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://www.example.com',
-  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV,
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
-
-/* Gatsby config */
+/**
+ * Gatsby config
+ */
 
 module.exports = {
-  /* General Information */
-  pathPrefix: config.pathPrefix,
-  siteMetadata: {
-    siteUrl: config.siteUrl + config.pathPrefix,
-  },
-
-  /* Plugins */
+  siteMetadata: appConfig,
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-typescript-checker',
@@ -42,12 +58,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        name: appConfig.title,
+        short_name: appConfig.titleShort,
+        description: appConfig.description,
+        start_url: appConfig.pathPrefix,
+        background_color: appConfig.backgroundColor,
+        theme_color: appConfig.themeColor,
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
@@ -80,22 +96,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        resolveEnv: () => NETLIFY_ENV,
-        env: {
-          production: {
-            policy: [{ userAgent: '*' }],
-          },
-          'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
-          },
-          'deploy-preview': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
-          },
-        },
+        host: appConfig.siteUrl,
+        sitemap: `${appConfig.siteUrl}/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
