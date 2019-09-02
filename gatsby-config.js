@@ -51,9 +51,10 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-typescript-checker',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-tslint',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
