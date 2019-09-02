@@ -81,6 +81,9 @@ const base = css`
   acronym {
     cursor: help;
   }
+  blockquote {
+    margin: 0;
+  }
   /* Links */
   a {
     color: ${Color.Clr1};
@@ -111,7 +114,7 @@ const base = css`
   /* Embed */
   img {
     border-style: none;
-    vertical-align: bottom;
+    vertical-align: middle;
     &:not([src$='.svg']) {
       height: auto;
     }
@@ -121,6 +124,12 @@ const base = css`
   }
   svg:not(:root) {
     overflow: hidden;
+  }
+  figure {
+    img {
+      margin: 0;
+    }
+    margin: 0;
   }
   /* Form */
   a,
@@ -207,9 +216,9 @@ const base = css`
 
   /* Other */
   hr {
-    border: 0;
-    border-top: 1px solid ${Color.Neutral};
-    margin: 4rem 0;
+    height: 1px;
+    border: none;
+    background: ${Color.NeutralLighter};
   }
   /* Table */
   table {
