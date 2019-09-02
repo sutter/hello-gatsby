@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import SEO from '../base/Seo';
@@ -33,45 +33,33 @@ interface AppProps {
   children: React.ReactNode;
 }
 
-interface AppState {
-  navMobileOpen: boolean;
-}
-
-class App extends React.Component<AppProps, AppState> {
-  state = {
-    navMobileOpen: false,
+const App: React.FunctionComponent<AppProps> = props => {
+  const [navMobileOpen, setNavMobileOpen] = useState(false);
+  const toggleNavMobile = () => {
+    setNavMobileOpen(!navMobileOpen);
   };
-  toggleNavMobile = () => {
-    this.setState(prevState => ({
-      navMobileOpen: !prevState.navMobileOpen,
-    }));
+  const closeNavMobile = () => {
+    setNavMobileOpen(false);
   };
-  closeNavMobile = () => {
-    this.setState({
-      navMobileOpen: false,
-    });
-  };
-  render() {
-    const { title, description, children } = this.props;
-    return (
-      <Container>
-        <SEO title={title} description={description} />
-        <Global
-          styles={css`
-            ${normalize}
-            ${base}
-          `}
-        />
-        <AppHeader
-          toggleNavMobile={this.toggleNavMobile}
-          closeNavMobile={this.closeNavMobile}
-          navOpen={this.state.navMobileOpen}
-        />
-        <AppMain>{children}</AppMain>
-        <AppFooter />
-      </Container>
-    );
-  }
-}
+  const { title, description, children } = props;
+  return (
+    <Container>
+      <SEO title={title} description={description} />
+      <Global
+        styles={css`
+          ${normalize}
+          ${base}
+        `}
+      />
+      <AppHeader
+        toggleNavMobile={toggleNavMobile}
+        closeNavMobile={closeNavMobile}
+        navOpen={navMobileOpen}
+      />
+      <AppMain>{children}</AppMain>
+      <AppFooter />
+    </Container>
+  );
+};
 
 export default App;
