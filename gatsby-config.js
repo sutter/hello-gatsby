@@ -51,7 +51,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-typescript-checker',
-    'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',

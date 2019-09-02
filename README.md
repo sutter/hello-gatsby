@@ -7,7 +7,6 @@
 - **css-in-js** with Emotion: [website](https://emotion.sh/) - [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/?=emoti)
 - TypeScript: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/?=type)
 - React-Helmet: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet)
-- Offline: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/?=gatsby-plugin-offline)
 - Sharp image processing library: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=gatsby-plugin-sharp)
 - Sitemap: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap)
 - Robots.txt : [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt/?=gatsby-plugin-robots-txt)
@@ -69,7 +68,7 @@
 
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
 
 1.  **Build**
 
