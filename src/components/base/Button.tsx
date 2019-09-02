@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/core';
 import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';
 import { CtaSizesType, CtaThemesType } from '../../appTypes';

@@ -2,7 +2,7 @@ const path = require('path');
 
 // Templates
 const componentTemplate = `
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Color } from '../../enums/appStyles';
@@ -21,7 +21,7 @@ export default {{componentName}};
 `;
 
 const pageTemplate = `
-import * as React from 'react';
+import React from 'react';
 import Wrapper from '../components/base/Wrapper';
 import App from '../components/layout/App';
 

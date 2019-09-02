@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Wrapper from '../components/base/Wrapper';
 import App from '../components/layout/App';
 

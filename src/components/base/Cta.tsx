@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/core';
 import Link from './Link';
 import { CtaThemes, CtaSizes, CtaBase, CtaDisabled } from '../../styles/cta';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { Color, State } from '../../../enums/appStyles';
 import { InputBasicInterface } from '../../../appInterface';

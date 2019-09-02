@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { Color, State, Radius } from '../../../enums/appStyles';
 import IconCheck from '../icons/IconCheck';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { useStaticQuery, graphql } from 'gatsby';
 import Link from '../base/Link';
