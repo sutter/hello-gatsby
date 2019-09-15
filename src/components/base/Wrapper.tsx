@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 import { MqUp, Breakpoint } from '../../enums/appStyles';
 import { WrapperSizesType } from '../../appTypes';
 
@@ -10,7 +10,7 @@ interface WrapperProps {
   children: React.ReactNode;
 }
 
-export const sizes = {
+export const sizes: { [key in WrapperSizesType]: SerializedStyles } = {
   L: css`
     max-width: 140rem;
   `,

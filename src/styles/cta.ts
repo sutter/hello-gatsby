@@ -1,9 +1,10 @@
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
+import { CtaSizesType, CtaThemesType } from '../appTypes';
 import { Radius, State, Color, FontSize } from '../enums/appStyles';
 
 const linkState = '&:hover, &:focus, &:active';
 
-export const CtaThemes = {
+export const CtaThemes: { [key in CtaThemesType]: SerializedStyles } = {
   primary: css`
     color: ${Color.Light};
     background: ${Color.Clr1};
@@ -26,7 +27,7 @@ export const CtaThemes = {
   `,
 };
 
-export const CtaSizes = {
+export const CtaSizes: { [key in CtaSizesType]: SerializedStyles } = {
   M: css`
     min-height: 4rem;
     padding: 1.2rem 2rem;
