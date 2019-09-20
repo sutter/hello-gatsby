@@ -1,5 +1,5 @@
 import React from 'react';
-import Wrapper from '../components/base/Wrapper';
+import Wrapper from '../components/layout/Wrapper';
 import App from '../components/layout/App';
 
 const NotFoundPage = () => {

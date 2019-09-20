@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { useStaticQuery, graphql } from 'gatsby';
 import Link from '../base/Link';
-import Wrapper from '../base/Wrapper';
+import Wrapper from './Wrapper';
 
 interface FooterProps {
   props?: object;

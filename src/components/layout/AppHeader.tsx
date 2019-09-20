@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import posed from 'react-pose';
 import { Route } from '../../enums/app';
 import Link from '../base/Link';
-import Wrapper from '../base/Wrapper';
+import Wrapper from './Wrapper';
 import NavButton from '../base/NavButton';
 import { MqUp, MqDown, Color, Header, Breakpoint } from '../../enums/appStyles';
 
