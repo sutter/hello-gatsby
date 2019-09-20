@@ -26,9 +26,8 @@ addDecorator(withKnobs);
 
 addParameters({
   backgrounds: [
-    { name: 'transparent', value: 'transparent', default: true },
-    { name: 'twitter', value: '#00aced' },
-    { name: 'facebook', value: '#3b5998' },
+    { name: 'transparent', value: 'transparent' },
+    { name: 'light', value: '#fff', default: true },
   ],
   viewport: {
     viewports: INITIAL_VIEWPORTS, // newViewports would be an ViewportMap. (see below for examples)
@@ -43,6 +42,13 @@ const withGlobal = cb => (
       styles={css`
         ${normalize};
         ${base};
+        body {
+          background: transparent;
+        }
+        #root {
+          margin: 20px;
+          border: 1px solid rgba(30, 167, 253, 0.25);
+        }
       `}
     />
     {cb()}
