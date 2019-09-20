@@ -17,11 +17,11 @@ export const CtaThemes: { [key in CtaThemesType]: SerializedStyles } = {
   `,
   neutral: css`
     color: ${Color.Clr1};
-    background: 'transparent';
+    background: transparent;
     border-color: ${Color.Clr1Light};
     ${linkState} {
       color: ${Color.Clr1};
-      background: 'transparent';
+      background: transparent;
       border-color: ${Color.Clr1};
     }
   `,
