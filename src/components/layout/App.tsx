@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
-import SEO from '../base/Seo';
+import SEO from './Seo';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import base from '../../styles/base';
