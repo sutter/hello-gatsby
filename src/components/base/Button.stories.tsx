@@ -6,29 +6,19 @@ import Button from './Button';
 const buttonProps = () => ({
   children: text('Children', 'Button'),
   disabled: boolean('disabled', false),
-  onClick: action('button click'),
+  onClick: action('button clicked'),
 });
 
 export default {
   title: 'Base|Button',
 };
 
-export const base = () => (
-  <Button onClick={action('clicked')} {...buttonProps()} />
-);
+export const base = () => <Button {...buttonProps()} />;
 
-export const themePrimary = () => (
-  <Button theme="primary" onClick={action('clicked')} {...buttonProps()} />
-);
+export const themePrimary = () => <Button theme="primary" {...buttonProps()} />;
 
-export const themeNeutral = () => (
-  <Button theme="neutral" onClick={action('clicked')} {...buttonProps()} />
-);
+export const themeNeutral = () => <Button theme="neutral" {...buttonProps()} />;
 
-export const sizeM = () => (
-  <Button size="M" onClick={action('clicked')} {...buttonProps()} />
-);
+export const sizeM = () => <Button size="M" {...buttonProps()} />;
 
-export const sizeS = () => (
-  <Button size="S" onClick={action('clicked')} {...buttonProps()} />
-);
+export const sizeS = () => <Button size="S" {...buttonProps()} />;
