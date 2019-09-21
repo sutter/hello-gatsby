@@ -6,11 +6,12 @@
 
 - **css-in-js** with Emotion: [website](https://emotion.sh/) - [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/?=emoti)
 - TypeScript: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/?=type)
+- Storybook : [website](https://storybook.js.org/)
 - React-Helmet: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet)
 - Sharp image processing library: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=gatsby-plugin-sharp)
 - Sitemap: [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap)
 - Robots.txt : [plugin doc](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt/?=gatsby-plugin-robots-txt)
-- Files generator : [Plop](https://github.com/amwmedia/plop)
+- Plop files generator : [website](https://github.com/amwmedia/plop)
 
 ## 🚀 Prerequisites
 
@@ -70,10 +71,22 @@
 
     \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
 
+1.  **Start Storybook**
+
+    ```sh
+    yarn storybook
+    ```
+
 1.  **Build**
 
     ```sh
     gatsby build
+    ```
+
+1.  **Build storybook**
+
+    ```sh
+    yarn build-storybook
     ```
 
 1.  **Serve Build**
@@ -87,7 +100,3 @@
     ```sh
     yarn new
     ```
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sutter/hello-gatsby)
