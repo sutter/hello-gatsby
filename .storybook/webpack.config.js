@@ -11,13 +11,6 @@ module.exports = ({ config }) => {
     require.resolve('@babel/preset-env'),
   ];
 
-  config.module.rules[0].use[0].options.plugins = [
-    // use @babel/plugin-proposal-class-properties for class arrow functions
-    require.resolve('@babel/plugin-proposal-class-properties'),
-    // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-    require.resolve('babel-plugin-remove-graphql-queries'),
-  ];
-
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
 
@@ -28,6 +21,10 @@ module.exports = ({ config }) => {
       presets: [
         ['react-app', { flow: false, typescript: true }],
         '@emotion/babel-preset-css-prop',
+      ],
+      plugins: [
+        '@babel/plugin-proposal-class-properties',
+        'babel-plugin-remove-graphql-queries',
       ],
     },
   });
