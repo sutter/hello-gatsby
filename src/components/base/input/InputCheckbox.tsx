@@ -6,8 +6,7 @@ import {
   Radius,
   TransitionTiming,
 } from '../../../enums/appStyles';
-import IconCheck from '../icons/IconCheck';
-import { InputBasicInterface } from '../../../appInterface';
+import { InputBasicInterface, IconInterface } from '../../../appInterface';
 
 interface InputCheckboxProps extends InputBasicInterface {
   children: React.ReactNode;
@@ -17,6 +16,26 @@ interface InputCheckboxProps extends InputBasicInterface {
 
 const bulletSize = 1.6;
 const bulletTop = 0.4;
+
+const IconCheck: React.FunctionComponent<IconInterface> = ({
+  size = 16,
+  stroke = 'currentColor',
+  strokeWidth = 2,
+  ...rest
+}) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" {...rest}>
+    <title>{'check'}</title>
+    <path
+      stroke={stroke}
+      d="M12.113 5.153L7 10.944l-2.308-2.38"
+      strokeWidth={strokeWidth}
+      fill="none"
+      fillRule="evenodd"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const Icon = styled(IconCheck)`
   position: absolute;
