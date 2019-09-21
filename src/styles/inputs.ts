@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { Color, Radius, State } from '../enums/appStyles';
 
-export const paddingHorizontal = '2rem';
+export const paddingHorizontal = '1.2rem';
 export const inputHeight = '4rem';
 
 export const inputBase = css`

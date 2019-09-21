@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { FontSize, Color } from '../../../enums/appStyles';
+import { FontSize, Color, FontWeight } from '../../../enums/appStyles';
 
 interface InputLabelProps {
   className?: string;
@@ -10,7 +10,8 @@ interface InputLabelProps {
 
 const Element = styled.label`
   display: block;
-  font-size: ${FontSize.M};
+  font-size: ${FontSize.S};
+  font-weight: ${FontWeight.Medium};
   color: ${Color.NeutralDark};
   cursor: pointer;
   &:not(:last-child) {

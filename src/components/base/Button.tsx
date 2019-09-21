@@ -15,7 +15,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   size = 'M',
   theme = 'primary',
   type = 'button',
-  disabled = 'false',
+  disabled = false,
   ...rest
 }) => (
   <button
