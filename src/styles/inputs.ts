@@ -11,7 +11,7 @@ export const inputBase = css`
   background-color: ${Color.Light};
   box-shadow: none;
   border-radius: ${Radius.S};
-  min-height: ${inputHeight};
+  height: ${inputHeight};
   &:hover {
     border-color: ${Color.BorderInputDark};
   }
