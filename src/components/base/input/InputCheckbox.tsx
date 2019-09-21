@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Color, State, Radius } from '../../../enums/appStyles';
+import {
+  Color,
+  State,
+  Radius,
+  TransitionTiming,
+} from '../../../enums/appStyles';
 import IconCheck from '../icons/IconCheck';
 import { InputBasicInterface } from '../../../appInterface';
 
@@ -37,7 +42,7 @@ const Label = styled.label<InputCheckboxProps>`
         props.checked ? `.1rem ${Color.Clr1}` : `1px ${Color.BorderInput}`};
     background: ${props => (props.checked ? Color.Clr1 : 'transparent')};
     border-radius: ${Radius.XS};
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ${TransitionTiming.base};
   }
   &:hover {
     &::before {

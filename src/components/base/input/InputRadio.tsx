@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Color, State } from '../../../enums/appStyles';
+import { Color, State, TransitionTiming } from '../../../enums/appStyles';
 import { InputBasicInterface } from '../../../appInterface';
 interface InputRadioProps extends InputBasicInterface {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ const Label = styled.label<InputRadioProps>`
       ${props =>
         props.checked ? `.6rem ${Color.Clr1}` : `1px ${Color.BorderInput}`};
     border-radius: 50%;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ${TransitionTiming.base};
   }
   &:hover {
     &::before {

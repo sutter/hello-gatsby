@@ -1,5 +1,11 @@
 import { css } from '@emotion/core';
-import { FontFamily, FontWeight, LineHeight, Color } from '../enums/appStyles';
+import {
+  FontFamily,
+  FontWeight,
+  LineHeight,
+  Color,
+  TransitionTiming,
+} from '../enums/appStyles';
 
 const base = css`
   *,
@@ -72,7 +78,7 @@ const base = css`
     margin: 0;
   }
   small {
-    font-size: inherit;
+    font-size: 80%;
   }
   abbr[title] {
     text-transform: lowercase;
@@ -87,7 +93,7 @@ const base = css`
   /* Links */
   a {
     color: ${Color.Clr1};
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ${TransitionTiming.base};
     &:active,
     &:hover,
     &:focus {

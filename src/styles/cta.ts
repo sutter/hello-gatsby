@@ -1,6 +1,12 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { CtaSizesType, CtaThemesType } from '../appTypes';
-import { Radius, State, Color, FontSize } from '../enums/appStyles';
+import {
+  Radius,
+  State,
+  Color,
+  FontSize,
+  TransitionTiming,
+} from '../enums/appStyles';
 
 const linkState = '&:hover, &:focus, &:active';
 
@@ -51,7 +57,7 @@ export const CtaBase = css`
   border-width: 1px;
   cursor: pointer;
   user-select: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ${TransitionTiming.base};
 `;
 
 export const CtaDisabled = css`

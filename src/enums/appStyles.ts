@@ -48,6 +48,10 @@ export enum Radius {
   S = '.4rem',
 }
 
+export enum TransitionTiming {
+  base = 'ease-in-out',
+}
+
 export enum State {
   DisabledOpacity = 0.25,
 }
