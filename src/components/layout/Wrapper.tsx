@@ -31,7 +31,6 @@ const Container = styled.div<WrapperProps>`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  ${props => sizes[(props.size = 'M')]};
   ${MqUp(Breakpoint.Smartphone)} {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -41,9 +40,9 @@ const Container = styled.div<WrapperProps>`
 const Wrapper: React.FunctionComponent<WrapperProps> = ({
   children,
   className,
-  size,
+  size = 'M',
 }) => (
-  <Container className={className} size={size}>
+  <Container className={className} css={sizes[size]}>
     {children}
   </Container>
 );
