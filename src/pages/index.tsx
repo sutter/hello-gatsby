@@ -5,7 +5,9 @@ import App from '../components/layout/App';
 const IndexPage = () => {
   return (
     <App>
-      <Wrapper>Hello World</Wrapper>
+      <Wrapper>
+        <h1>Hello World</h1>
+      </Wrapper>
     </App>
   );
 };

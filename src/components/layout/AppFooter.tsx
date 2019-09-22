@@ -9,7 +9,7 @@ interface FooterProps {
 }
 
 const Container = styled.footer`
-  padding-top: 2rem;
+  padding-top: 3.6rem;
   padding-bottom: 2rem;
 `;
 

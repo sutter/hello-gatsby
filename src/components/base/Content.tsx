@@ -144,9 +144,6 @@ const Content = styled.div`
   figure {
     padding: 0;
     margin: ${spacing * 2}rem auto;
-    img {
-      margin: 0;
-    }
   }
   figcaption {
     margin-top: 0.8rem;
@@ -154,7 +151,7 @@ const Content = styled.div`
   }
   img {
     display: block;
-    margin: ${spacing * 2}rem auto;
+    margin: 0 auto;
     border-radius: ${Radius.XS};
   }
   /* Table */

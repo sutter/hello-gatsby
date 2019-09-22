@@ -5,6 +5,7 @@ interface LinkProps {
   to: string;
   children: React.ReactNode | string;
   activeClassName?: string;
+  rel?: string;
 }
 
 interface ExternalLinkProps {
