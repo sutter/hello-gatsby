@@ -8,6 +8,7 @@
     "import-name": false,
     "no-boolean-literal-compare": false,
     "no-implicit-dependencies": [true, "dev"],
+    "no-submodule-imports": [true, "lodash"],
     "object-literal-sort-keys": false,
     "interface-name": false,
     "member-access": [true, "no-public"],

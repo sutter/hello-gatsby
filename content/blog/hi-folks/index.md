@@ -1,6 +1,7 @@
 ---
 title: New Beginnings
 date: '2018-11-23'
+tags: ['hello', 'Chicago']
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

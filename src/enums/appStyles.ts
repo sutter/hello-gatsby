@@ -8,6 +8,7 @@ export enum Color {
 
   Clr1 = 'hsla(270, 50%, 40%, 1)',
   Clr1Light = 'hsla(270, 50%, 60%, 1)',
+  Clr1Lighter = 'hsla(270, 50%, 80%, 1)',
 
   BorderInput = 'hsla(0, 0%, 13%, 0.125)',
   BorderInputDark = 'hsla(0, 0%, 13%, 0.25)',

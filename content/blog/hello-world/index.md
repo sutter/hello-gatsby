@@ -2,6 +2,7 @@
 title: Hello World
 date: '2018-12-01'
 description: 'Hello World'
+tags: ['animals', 'Chicago', 'zoos', 'hello']
 ---
 
 This is my first post on my new fake blog! How exciting!

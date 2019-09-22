@@ -1,11 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
+import { graphql } from 'gatsby';
+import Link from '../components/base/Link';
 import Wrapper from '../components/layout/Wrapper';
 import App from '../components/layout/App';
 import BlogArticle from '../components/base/BlogArticle';
+import Title from '../components/base/Title';
 
-interface PostNode {
+interface TagNode {
   node: {
     excerpt: string;
     frontmatter: {
@@ -19,21 +21,36 @@ interface PostNode {
   };
 }
 
-interface BlogPageProps {
+interface TagsProps {
+  pageContext: {
+    tag: string;
+  };
   data: {
     allMarkdownRemark: {
-      edges: PostNode[];
+      edges: TagNode[];
+      totalCount: number;
     };
   };
 }
 
-const BlogPage: React.FunctionComponent<BlogPageProps> = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
-
+const Tags: React.FunctionComponent<TagsProps> = ({ pageContext, data }) => {
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
+  const tagHeader = `${totalCount} post${
+    totalCount === 1 ? '' : 's'
+  } tagged with "${tag}"`;
   return (
-    <App title="Blog">
+    <App>
       <Wrapper>
-        {posts.map(({ node }) => {
+        <Title
+          as="h1"
+          css={css`
+            margin-bottom: 3.6rem;
+          `}
+        >
+          {tagHeader}
+        </Title>
+        {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
             <BlogArticle
@@ -51,16 +68,22 @@ const BlogPage: React.FunctionComponent<BlogPageProps> = ({ data }) => {
             />
           );
         })}
+        <Link to="/tags">All tags</Link>
       </Wrapper>
     </App>
   );
 };
 
-export default BlogPage;
+export default Tags;
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query($tag: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
+      totalCount
       edges {
         node {
           excerpt
