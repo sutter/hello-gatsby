@@ -8,7 +8,7 @@ import Content from '../components/base/Content';
 import Title from '../components/base/Title';
 import Time from '../components/base/Time';
 import Link from '../components/base/Link';
-import Tags from '../components/base/tags';
+import TagsList from '../components/base/TagsList';
 
 interface BlogPostTemplateProps {
   data: {
@@ -71,7 +71,7 @@ const BlogPostTemplate: React.FunctionComponent<
                   margin-top: 1.2rem;
                 `}
               >
-                <Tags data={post.frontmatter.tags} />
+                <TagsList data={post.frontmatter.tags} />
               </div>
             )}
           </ArticleHeader>

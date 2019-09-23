@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import Title from './Title';
 import Link from './Link';
 import Time from './Time';
-import Tags from './Tags';
+import TagsList from './TagsList';
 
 interface BlogArticleProps {
   slug: string;
@@ -45,7 +45,7 @@ const BlogArticle: React.FunctionComponent<BlogArticleProps> = ({
           margin-top: 1.2rem;
         `}
       >
-        <Tags data={tags} />
+        <TagsList data={tags} />
       </div>
     )}
   </BlogArticleEl>

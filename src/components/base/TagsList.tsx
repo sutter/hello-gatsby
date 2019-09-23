@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import kebabCase from 'lodash/kebabCase';
 import Tag from './Tag';
 
-interface TagsProps {
+interface TagsListProps {
   data: string[];
 }
 
-const TagsEl = styled.div`
+const TagsListEl = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: -0.4rem;
@@ -16,14 +16,17 @@ const TagsEl = styled.div`
   }
 `;
 
-const Tags: React.FunctionComponent<TagsProps> = ({ data, ...rest }) => (
-  <TagsEl {...rest}>
+const TagsList: React.FunctionComponent<TagsListProps> = ({
+  data,
+  ...rest
+}) => (
+  <TagsListEl {...rest}>
     {data.map(tag => (
       <Tag key={tag} to={`/tags/${kebabCase(tag)}`}>
         {kebabCase(tag)}
       </Tag>
     ))}
-  </TagsEl>
+  </TagsListEl>
 );
 
-export default Tags;
+export default TagsList;
