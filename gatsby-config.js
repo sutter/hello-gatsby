@@ -13,9 +13,10 @@ const appConfig = {
   /**
    * Site information
    */
-  title: 'Hello Gatsby - simple stater for Gatsby',
+  title:
+    'Hello Gatsby - starter for GatsbyJS with typescript, emotion.js ans storybook',
   titleShort: 'Hello Gatsby',
-  description: 'Simple stater for Gatsby width Emotion.js',
+  description: 'Starter for GatsbyJS with typescript, emotion.js ans storybook',
   author: 'Laurent Sutterlity',
   email: 'laurent@sutterlity.fr',
 
