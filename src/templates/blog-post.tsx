@@ -8,6 +8,7 @@ import Content from '../components/base/Content';
 import Title from '../components/base/Title';
 import Time from '../components/base/Time';
 import Link from '../components/base/Link';
+import Tags from '../components/base/tags';
 
 interface BlogPostTemplateProps {
   data: {
@@ -19,6 +20,7 @@ interface BlogPostTemplateProps {
         title: string;
         description: string;
         date: string;
+        tags: string[];
       };
     };
   };
@@ -63,6 +65,15 @@ const BlogPostTemplate: React.FunctionComponent<
               {post.frontmatter.title}
             </Title>
             <Time>{post.frontmatter.date}</Time>
+            {post.frontmatter.tags && (
+              <div
+                css={css`
+                  margin-top: 1.2rem;
+                `}
+              >
+                <Tags data={post.frontmatter.tags} />
+              </div>
+            )}
           </ArticleHeader>
           <section>
             <Content dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -104,6 +115,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

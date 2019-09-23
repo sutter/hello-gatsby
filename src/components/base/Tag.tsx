@@ -10,6 +10,7 @@ interface TagProps {
 
 const TagEl = styled(Link)`
   display: inline-block;
+  vertical-align: bottom;
   padding: 0.3rem 1.2rem;
   font-size: ${FontSize.XXS};
   line-height: ${LineHeight.S};

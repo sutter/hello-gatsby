@@ -1,10 +1,10 @@
 import React from 'react';
-import kebabCase from 'lodash/kebabCase';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import Title from './Title';
 import Link from './Link';
 import Time from './Time';
-import Tag from './Tag';
+import Tags from './Tags';
 
 interface BlogArticleProps {
   slug: string;
@@ -19,16 +19,6 @@ const BlogArticleEl = styled.article``;
 const Header = styled.header`
   margin-bottom: 0.6rem;
 `;
-
-const TagsList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.6rem -0.6rem -0.6rem;
-  > * {
-    margin: 0.6rem;
-  }
-`;
-
 const BlogArticle: React.FunctionComponent<BlogArticleProps> = ({
   slug,
   title,
@@ -46,13 +36,13 @@ const BlogArticle: React.FunctionComponent<BlogArticleProps> = ({
     </Header>
     <p dangerouslySetInnerHTML={{ __html: excerpt }} />
     {tags && (
-      <TagsList>
-        {tags.map(tag => (
-          <li key={tag}>
-            <Tag to={`/tags/${kebabCase(tag)}`}>{kebabCase(tag)}</Tag>
-          </li>
-        ))}
-      </TagsList>
+      <div
+        css={css`
+          margin-top: 1.2rem;
+        `}
+      >
+        <Tags data={tags} />
+      </div>
     )}
   </BlogArticleEl>
 );
