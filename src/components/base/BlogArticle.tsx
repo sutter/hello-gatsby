@@ -14,7 +14,11 @@ interface BlogArticleProps {
   tags?: [];
 }
 
-const BlogArticleEl = styled.article``;
+const BlogArticleEl = styled.article`
+  &:not(:last-child) {
+    margin-bottom: 3.6rem;
+  }
+`;
 
 const Header = styled.header`
   margin-bottom: 0.6rem;

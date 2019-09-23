@@ -60,11 +60,6 @@ const Tags: React.FunctionComponent<TagsProps> = ({ pageContext, data }) => {
               date={node.frontmatter.date}
               excerpt={node.excerpt}
               tags={node.frontmatter.tags}
-              css={css`
-                &:not(:last-child) {
-                  margin-bottom: 3.6rem;
-                }
-              `}
             />
           );
         })}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
 import Wrapper from '../components/layout/Wrapper';
 import App from '../components/layout/App';
 import BlogArticle from '../components/base/BlogArticle';
@@ -43,11 +42,6 @@ const BlogPage: React.FunctionComponent<BlogPageProps> = ({ data }) => {
               date={node.frontmatter.date}
               excerpt={node.excerpt}
               tags={node.frontmatter.tags}
-              css={css`
-                &:not(:last-child) {
-                  margin-bottom: 3.6rem;
-                }
-              `}
             />
           );
         })}
