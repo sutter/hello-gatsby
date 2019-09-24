@@ -100,3 +100,9 @@
     ```sh
     yarn new
     ```
+
+1.  **Format files with Prettier**
+
+    ```sh
+    gatsby format
+    ```

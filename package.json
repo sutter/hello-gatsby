@@ -7,12 +7,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write '**/*.tsx'",
     "lint": "tslint --project .",
     "new": "yarn plop",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
-    "build-storybook": "NODE_ENV=production build-storybook -s static"
+    "build-storybook": "build-storybook -o storybook-static"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
