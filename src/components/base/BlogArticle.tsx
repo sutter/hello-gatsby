@@ -23,6 +23,7 @@ const BlogArticleEl = styled.article`
 const Header = styled.header`
   margin-bottom: 0.6rem;
 `;
+
 const BlogArticle: React.FunctionComponent<BlogArticleProps> = ({
   slug,
   title,
@@ -30,25 +31,27 @@ const BlogArticle: React.FunctionComponent<BlogArticleProps> = ({
   excerpt,
   tags,
   ...rest
-}) => (
-  <BlogArticleEl {...rest}>
-    <Header>
-      <Title as="h1">
-        <Link to={slug}>{title}</Link>
-      </Title>
-      <Time>{date}</Time>
-    </Header>
-    <p dangerouslySetInnerHTML={{ __html: excerpt }} />
-    {tags && (
-      <div
-        css={css`
-          margin-top: 1.2rem;
-        `}
-      >
-        <TagsList data={tags} />
-      </div>
-    )}
-  </BlogArticleEl>
-);
+}) => {
+  return (
+    <BlogArticleEl {...rest}>
+      <Header>
+        <Title as="h1">
+          <Link to={slug}>{title}</Link>
+        </Title>
+        <Time date={date} />
+      </Header>
+      <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+      {tags && (
+        <div
+          css={css`
+            margin-top: 1.2rem;
+          `}
+        >
+          <TagsList data={tags} />
+        </div>
+      )}
+    </BlogArticleEl>
+  );
+};
 
 export default BlogArticle;

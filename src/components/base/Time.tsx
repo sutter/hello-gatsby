@@ -4,7 +4,7 @@ import { FontSize, Color } from '../../enums/appStyles';
 
 interface TitleProps {
   className?: string;
-  children: React.ReactNode;
+  date: string;
 }
 
 const Element = styled.time`
@@ -12,8 +12,22 @@ const Element = styled.time`
   color: ${Color.Neutral};
 `;
 
-const Title: React.FunctionComponent<TitleProps> = ({ children, ...rest }) => (
-  <Element {...rest}>{children}</Element>
-);
+const options = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 
-export default Title;
+const getDate = (date: any) => date.toLocaleDateString('en-US', options);
+
+const Time: React.FunctionComponent<TitleProps> = ({ date, ...rest }) => {
+  const theDate = new Date(date);
+  const theIsoDate = theDate.toISOString();
+  return (
+    <Element dateTime={theIsoDate} {...rest}>
+      {getDate(theDate)}
+    </Element>
+  );
+};
+
+export default Time;

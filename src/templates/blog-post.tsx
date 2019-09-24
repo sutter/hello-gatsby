@@ -64,7 +64,7 @@ const BlogPostTemplate: React.FunctionComponent<
             >
               {post.frontmatter.title}
             </Title>
-            <Time>{post.frontmatter.date}</Time>
+            <Time date={post.frontmatter.date} />
             {post.frontmatter.tags && (
               <div
                 css={css`
