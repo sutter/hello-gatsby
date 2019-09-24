@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Global, css } from '@emotion/core';
 import SEO from './Seo';
 import AppHeader from './AppHeader';
@@ -31,6 +32,7 @@ interface AppProps {
   description?: string;
   image?: string;
   children: React.ReactNode;
+  language?: string;
 }
 
 const App: React.FunctionComponent<AppProps> = props => {
@@ -41,10 +43,27 @@ const App: React.FunctionComponent<AppProps> = props => {
   const closeNavMobile = () => {
     setNavMobileOpen(false);
   };
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+            twitterUser
+            language
+          }
+        }
+      }
+    `,
+  );
   const { title, description, children } = props;
   return (
     <Container>
-      <SEO title={title} description={description} />
+      <SEO
+        title={title}
+        description={description}
+        lang={site.siteMetadata.language}
+      />
       <Global
         styles={css`
           ${normalize}

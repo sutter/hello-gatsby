@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { useStaticQuery, graphql } from 'gatsby';
 import { FontSize, Color } from '../../enums/appStyles';
 
 interface TitleProps {
@@ -18,11 +19,23 @@ const options = {
   day: 'numeric',
 };
 
-const getDate = (date: any) => date.toLocaleDateString('en-US', options);
-
 const Time: React.FunctionComponent<TitleProps> = ({ date, ...rest }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            language
+          }
+        }
+      }
+    `,
+  );
+  const getDate = (data: any) =>
+    data.toLocaleDateString(site.siteMetadata.language, options);
   const theDate = new Date(date);
   const theIsoDate = theDate.toISOString();
+
   return (
     <Element dateTime={theIsoDate} {...rest}>
       {getDate(theDate)}

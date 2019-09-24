@@ -3,8 +3,8 @@
  */
 
 const appConfig = {
-  // Language Tag on <html> element
-  language: 'fr',
+  // Language Tag on <html> and localized elements
+  language: 'en-US',
   // Domain of your site. No trailing slash!
   siteUrl: 'https://hello-gatsby-starter.netlify.com',
   // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "/portfolio"
