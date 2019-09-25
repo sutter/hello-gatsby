@@ -22,7 +22,7 @@ const TagsList: React.FunctionComponent<TagsListProps> = ({
 }) => (
   <TagsListEl {...rest}>
     {data.map(tag => (
-      <Tag key={tag} to={`/tags/${kebabCase(tag)}`}>
+      <Tag key={tag} to={`/blog/tags/${kebabCase(tag)}`}>
         {kebabCase(tag)}
       </Tag>
     ))}

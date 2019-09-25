@@ -1,12 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { graphql } from 'gatsby';
-import Link from '../components/base/Link';
 import Wrapper from '../components/layout/Wrapper';
 import App from '../components/layout/App';
 import BlogArticle from '../components/base/BlogArticle';
 import Title from '../components/base/Title';
-
 interface TagNode {
   node: {
     excerpt: string;
@@ -63,7 +61,6 @@ const Tags: React.FunctionComponent<TagsProps> = ({ pageContext, data }) => {
             />
           );
         })}
-        <Link to="/tags">All tags</Link>
       </Wrapper>
     </App>
   );
