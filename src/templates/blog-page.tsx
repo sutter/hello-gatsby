@@ -87,7 +87,7 @@ export const blogListQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY", locale: "en-EN")
+            date(formatString: "MMMM DD, YYYY")
             title
             tags
           }
