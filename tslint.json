@@ -13,5 +13,11 @@
     "interface-name": false,
     "member-access": [true, "no-public"],
     "ordered-imports": false
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false
+  },
+  "linterOptions": {
+    "exclude": ["public/**/*"]
   }
 }
