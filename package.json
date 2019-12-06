@@ -7,6 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --write '**/*.tsx'",
     "lint": "tslint --project .",
     "new": "yarn plop",

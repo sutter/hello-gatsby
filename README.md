@@ -15,15 +15,6 @@
 
 ## 🚀 Prerequisites
 
-1.  **Install the Gatsby CLI**
-
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
-
-    ```sh
-    # install the Gatsby CLI globally
-    npm install -g gatsby-cli
-    ```
-
 1.  **Node version manager**
 
     Install [NVM](https://github.com/creationix/nvm) to manage its version of Node:
@@ -64,7 +55,7 @@
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    gatsby develop
+    yarn develop
     ```
 
     Your site is now running at `http://localhost:8000`!
@@ -80,7 +71,7 @@
 1.  **Build**
 
     ```sh
-    gatsby build
+    yarn build
     ```
 
 1.  **Build storybook**
@@ -92,7 +83,7 @@
 1.  **Serve Build**
 
     ```sh
-    gatsby serve
+    yarn serve
     ```
 
 1.  **Create new file**
@@ -104,5 +95,5 @@
 1.  **Format files with Prettier**
 
     ```sh
-    gatsby format
+    yarn format
     ```
